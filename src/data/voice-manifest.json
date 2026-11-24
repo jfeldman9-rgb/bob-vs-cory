@@ -1,0 +1,1762 @@
+[
+ {
+  "id": "ann_title_main",
+  "speaker": "announcer",
+  "file": "ann_title_main.mp3",
+  "trigger": "title screen",
+  "text": "Bob versus Cory!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_title_sub",
+  "speaker": "announcer",
+  "file": "ann_title_sub.mp3",
+  "trigger": "title screen (after main)",
+  "text": "Inevitable... versus Fabulous!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_menu_story",
+  "speaker": "announcer",
+  "file": "ann_menu_story.mp3",
+  "trigger": "menu select",
+  "text": "Story mode!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_menu_arcade",
+  "speaker": "announcer",
+  "file": "ann_menu_arcade.mp3",
+  "trigger": "menu select",
+  "text": "Klassic Arcade Tower!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_menu_versus",
+  "speaker": "announcer",
+  "file": "ann_menu_versus.mp3",
+  "trigger": "menu select",
+  "text": "Versus mode!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_menu_training",
+  "speaker": "announcer",
+  "file": "ann_menu_training.mp3",
+  "trigger": "menu select",
+  "text": "Practice mode!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_menu_fatality_trainer",
+  "speaker": "announcer",
+  "file": "ann_menu_fatality_trainer.mp3",
+  "trigger": "menu select",
+  "text": "Fatality trainer!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_select_prompt",
+  "speaker": "announcer",
+  "file": "ann_select_prompt.mp3",
+  "trigger": "character select open",
+  "text": "Choose your fighter!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_select_bob",
+  "speaker": "announcer",
+  "file": "ann_select_bob.mp3",
+  "trigger": "select lock-in",
+  "text": "Agent Bob!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_select_cory",
+  "speaker": "announcer",
+  "file": "ann_select_cory.mp3",
+  "trigger": "select lock-in",
+  "text": "Flamboyant Cory!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_select_bob_title",
+  "speaker": "announcer",
+  "file": "ann_select_bob_title.mp3",
+  "trigger": "select hover (long)",
+  "text": "Agent Bob, the Inevitable Anomaly!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_select_cory_title",
+  "speaker": "announcer",
+  "file": "ann_select_cory_title.mp3",
+  "trigger": "select hover (long)",
+  "text": "Flamboyant Cory, the Disco Sovereign!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_stage_prompt",
+  "speaker": "announcer",
+  "file": "ann_stage_prompt.mp3",
+  "trigger": "stage select open",
+  "text": "Choose your arena!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_stage_subway",
+  "speaker": "announcer",
+  "file": "ann_stage_subway.mp3",
+  "trigger": "stage select",
+  "text": "Matrix Subway Platform!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_stage_penthouse",
+  "speaker": "announcer",
+  "file": "ann_stage_penthouse.mp3",
+  "trigger": "stage select",
+  "text": "Neon Disco Penthouse!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_stage_colosseum",
+  "speaker": "announcer",
+  "file": "ann_stage_colosseum.mp3",
+  "trigger": "stage select",
+  "text": "The Great Eggplant Colosseum!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_stage_lounge",
+  "speaker": "announcer",
+  "file": "ann_stage_lounge.mp3",
+  "trigger": "stage select",
+  "text": "Scottsdale Midnight Lounge!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_versus",
+  "speaker": "announcer",
+  "file": "ann_versus.mp3",
+  "trigger": "versus screen",
+  "text": "Versus!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_round_1",
+  "speaker": "announcer",
+  "file": "ann_round_1.mp3",
+  "trigger": "round start",
+  "text": "Round one!",
+  "source": "elevenlabs:jason-clone (reused from velvet-vendetta round1.mp3)"
+ },
+ {
+  "id": "ann_round_2",
+  "speaker": "announcer",
+  "file": "ann_round_2.mp3",
+  "trigger": "round start",
+  "text": "Round two!",
+  "source": "elevenlabs:jason-clone (reused from velvet-vendetta round2.mp3)"
+ },
+ {
+  "id": "ann_round_3",
+  "speaker": "announcer",
+  "file": "ann_round_3.mp3",
+  "trigger": "round start",
+  "text": "Round three!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_final_round",
+  "speaker": "announcer",
+  "file": "ann_final_round.mp3",
+  "trigger": "round start (deciding round)",
+  "text": "Final round!",
+  "source": "elevenlabs:jason-clone (reused from velvet-vendetta round3.mp3)"
+ },
+ {
+  "id": "ann_fight",
+  "speaker": "announcer",
+  "file": "ann_fight.mp3",
+  "trigger": "round start (after round call)",
+  "text": "Fight!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_fight_alt",
+  "speaker": "announcer",
+  "file": "ann_fight_alt.mp3",
+  "trigger": "round start (first match of session)",
+  "text": "Let the kombat begin!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_knockout",
+  "speaker": "announcer",
+  "file": "ann_knockout.mp3",
+  "trigger": "round end by health",
+  "text": "Knockout!",
+  "source": "elevenlabs:jason-clone (reused from velvet-vendetta ko.mp3)"
+ },
+ {
+  "id": "ann_time",
+  "speaker": "announcer",
+  "file": "ann_time.mp3",
+  "trigger": "timer reaches 0",
+  "text": "Time!",
+  "source": "elevenlabs:jason-clone (reused from velvet-vendetta time.mp3)"
+ },
+ {
+  "id": "ann_draw",
+  "speaker": "announcer",
+  "file": "ann_draw.mp3",
+  "trigger": "draw round",
+  "text": "Draw!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_double_knockout",
+  "speaker": "announcer",
+  "file": "ann_double_knockout.mp3",
+  "trigger": "both fighters at 0",
+  "text": "Double knockout!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_bob_wins",
+  "speaker": "announcer",
+  "file": "ann_bob_wins.mp3",
+  "trigger": "round/match win",
+  "text": "Agent Bob wins!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_cory_wins",
+  "speaker": "announcer",
+  "file": "ann_cory_wins.mp3",
+  "trigger": "round/match win",
+  "text": "Flamboyant Cory wins!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_flawless",
+  "speaker": "announcer",
+  "file": "ann_flawless.mp3",
+  "trigger": "win with full health",
+  "text": "Flawless victory!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_finish_him",
+  "speaker": "announcer",
+  "file": "ann_finish_him.mp3",
+  "trigger": "finish him phase",
+  "text": "Finish him!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_fatality",
+  "speaker": "announcer",
+  "file": "ann_fatality.mp3",
+  "trigger": "fatality performed",
+  "text": "Fatality!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_brutality",
+  "speaker": "announcer",
+  "file": "ann_brutality.mp3",
+  "trigger": "brutality performed",
+  "text": "Brutality!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_fatal_blow",
+  "speaker": "announcer",
+  "file": "ann_fatal_blow.mp3",
+  "trigger": "fatal blow connects",
+  "text": "Fatal Blow!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_system_purge",
+  "speaker": "announcer",
+  "file": "ann_system_purge.mp3",
+  "trigger": "bob fatal blow name card",
+  "text": "System Purge!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_showstopper",
+  "speaker": "announcer",
+  "file": "ann_showstopper.mp3",
+  "trigger": "cory fatal blow name card",
+  "text": "Showstopper!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_inevitable_parm",
+  "speaker": "announcer",
+  "file": "ann_inevitable_parm.mp3",
+  "trigger": "bob fatality name card",
+  "text": "Inevitable Parm!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_runway_aubergine",
+  "speaker": "announcer",
+  "file": "ann_runway_aubergine.mp3",
+  "trigger": "cory fatality name card",
+  "text": "Runway Aubergine!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_parmesan_override",
+  "speaker": "announcer",
+  "file": "ann_parmesan_override.mp3",
+  "trigger": "bob brutality name card",
+  "text": "Parmesan Override!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_eggplant_splat",
+  "speaker": "announcer",
+  "file": "ann_eggplant_splat.mp3",
+  "trigger": "cory brutality name card",
+  "text": "Fabulous Eggplant Splat!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_first_hit",
+  "speaker": "announcer",
+  "file": "ann_first_hit.mp3",
+  "trigger": "first hit of round",
+  "text": "First hit!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_combo_breaker",
+  "speaker": "announcer",
+  "file": "ann_combo_breaker.mp3",
+  "trigger": "combo breaker",
+  "text": "Combo breaker!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_reversal",
+  "speaker": "announcer",
+  "file": "ann_reversal.mp3",
+  "trigger": "reversal callout",
+  "text": "Reversal!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_punish",
+  "speaker": "announcer",
+  "file": "ann_punish.mp3",
+  "trigger": "punish callout",
+  "text": "Punish!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_flawless_block",
+  "speaker": "announcer",
+  "file": "ann_flawless_block.mp3",
+  "trigger": "flawless block",
+  "text": "Flawless block!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_counter",
+  "speaker": "announcer",
+  "file": "ann_counter.mp3",
+  "trigger": "counter hit / parry",
+  "text": "Counter!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_excellent",
+  "speaker": "announcer",
+  "file": "ann_excellent.mp3",
+  "trigger": "5+ hit combo",
+  "text": "Excellent!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_outstanding",
+  "speaker": "announcer",
+  "file": "ann_outstanding.mp3",
+  "trigger": "8+ hit combo",
+  "text": "Outstanding!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_inevitable",
+  "speaker": "announcer",
+  "file": "ann_inevitable.mp3",
+  "trigger": "bob 30%+ combo",
+  "text": "Inevitable!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_fabulous",
+  "speaker": "announcer",
+  "file": "ann_fabulous.mp3",
+  "trigger": "cory 30%+ combo",
+  "text": "Fabulous!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_rematch",
+  "speaker": "announcer",
+  "file": "ann_rematch.mp3",
+  "trigger": "rematch selected",
+  "text": "Rematch!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_continue",
+  "speaker": "announcer",
+  "file": "ann_continue.mp3",
+  "trigger": "arcade loss",
+  "text": "Continue?",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_game_over",
+  "speaker": "announcer",
+  "file": "ann_game_over.mp3",
+  "trigger": "arcade continue timeout",
+  "text": "Game over.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_tower_start",
+  "speaker": "announcer",
+  "file": "ann_tower_start.mp3",
+  "trigger": "arcade tower start",
+  "text": "Climb the tower!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_tower_rival",
+  "speaker": "announcer",
+  "file": "ann_tower_rival.mp3",
+  "trigger": "arcade final rung",
+  "text": "Your rival awaits!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_tower_complete",
+  "speaker": "announcer",
+  "file": "ann_tower_complete.mp3",
+  "trigger": "arcade cleared",
+  "text": "Tower conquered!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_unlock_palette",
+  "speaker": "announcer",
+  "file": "ann_unlock_palette.mp3",
+  "trigger": "unlock",
+  "text": "New palette unlocked!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_practice_success",
+  "speaker": "announcer",
+  "file": "ann_practice_success.mp3",
+  "trigger": "fatality trainer success",
+  "text": "Perfect execution!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_practice_close",
+  "speaker": "announcer",
+  "file": "ann_practice_close.mp3",
+  "trigger": "fatality trainer wrong range",
+  "text": "Too close!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "ann_practice_far",
+  "speaker": "announcer",
+  "file": "ann_practice_far.mp3",
+  "trigger": "fatality trainer wrong range",
+  "text": "Too far!",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_intro_01",
+  "speaker": "announcer",
+  "file": "narr_intro_01.mp3",
+  "trigger": "story intro still 01",
+  "text": "In a city that never sleeps, two legends refuse to share the spotlight.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_intro_02",
+  "speaker": "announcer",
+  "file": "narr_intro_02.mp3",
+  "trigger": "story intro still 02",
+  "text": "Agent Bob. Precision. Protocol. Zero tolerance for anomalies.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_intro_03",
+  "speaker": "announcer",
+  "file": "narr_intro_03.mp3",
+  "trigger": "story intro still 03",
+  "text": "Flamboyant Cory. Sequins. Spectacle. Zero tolerance for boring.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_intro_04",
+  "speaker": "announcer",
+  "file": "narr_intro_04.mp3",
+  "trigger": "story intro still 04",
+  "text": "The Golden Aubergine tournament has summoned them both.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_intro_05",
+  "speaker": "announcer",
+  "file": "narr_intro_05.mp3",
+  "trigger": "story intro still 05",
+  "text": "Only one will walk out holding the Golden Aubergine.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_ch1",
+  "speaker": "announcer",
+  "file": "narr_ch1.mp3",
+  "trigger": "story chapter 1 card",
+  "text": "Chapter one. Sector Seven. Down here, the rain never stops.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_ch2",
+  "speaker": "announcer",
+  "file": "narr_ch2.mp3",
+  "trigger": "story chapter 2 card",
+  "text": "Chapter two. Forty floors up, the party never stops either.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_ch3",
+  "speaker": "announcer",
+  "file": "narr_ch3.mp3",
+  "trigger": "story chapter 3 card",
+  "text": "Chapter three. The Colosseum of the Golden Aubergine.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_ch4",
+  "speaker": "announcer",
+  "file": "narr_ch4.mp3",
+  "trigger": "story chapter 4 card",
+  "text": "Final chapter. A desert lounge at midnight. One last dance.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_rival_bob",
+  "speaker": "announcer",
+  "file": "narr_rival_bob.mp3",
+  "trigger": "arcade rival still (bob)",
+  "text": "One rival remains. He is wearing feathers.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_rival_cory",
+  "speaker": "announcer",
+  "file": "narr_rival_cory.mp3",
+  "trigger": "arcade rival still (cory)",
+  "text": "One rival remains. He is wearing a suit. Of course he is.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_bob_end_01",
+  "speaker": "announcer",
+  "file": "narr_bob_end_01.mp3",
+  "trigger": "bob ending still 01",
+  "text": "Agent Bob claims the Golden Aubergine. The anomaly is contained.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_bob_end_02",
+  "speaker": "announcer",
+  "file": "narr_bob_end_02.mp3",
+  "trigger": "bob ending still 02",
+  "text": "His report is flawless, except for one pink sequin he cannot explain.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_bob_end_03",
+  "speaker": "announcer",
+  "file": "narr_bob_end_03.mp3",
+  "trigger": "bob ending still 03",
+  "text": "Later, the System logs an irregularity. Agent Bob is tapping his boot.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_cory_end_01",
+  "speaker": "announcer",
+  "file": "narr_cory_end_01.mp3",
+  "trigger": "cory ending still 01",
+  "text": "Flamboyant Cory wins the Golden Aubergine, and the crowd goes wild.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_cory_end_02",
+  "speaker": "announcer",
+  "file": "narr_cory_end_02.mp3",
+  "trigger": "cory ending still 02",
+  "text": "By sunrise, the ancient colosseum is the hottest club in the realm.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_cory_end_04",
+  "speaker": "announcer",
+  "file": "narr_cory_end_04.mp3",
+  "trigger": "cory ending still 04",
+  "text": "And somewhere deep in the System, an agent learns to dance.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "narr_credits",
+  "speaker": "announcer",
+  "file": "narr_credits.mp3",
+  "trigger": "credits",
+  "text": "Thank you for playing Bob versus Cory. Stay inevitable. Stay fabulous.",
+  "source": "elevenlabs:eleven_v4:jason-clone"
+ },
+ {
+  "id": "bob_grunt_light_1",
+  "speaker": "bob",
+  "file": "bob_grunt_light_1.wav",
+  "trigger": "light attack effort",
+  "text": "Hup.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_grunt_light_2",
+  "speaker": "bob",
+  "file": "bob_grunt_light_2.wav",
+  "trigger": "light attack effort",
+  "text": "Tch!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_grunt_heavy_1",
+  "speaker": "bob",
+  "file": "bob_grunt_heavy_1.wav",
+  "trigger": "heavy attack effort",
+  "text": "Hnngh!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_grunt_heavy_2",
+  "speaker": "bob",
+  "file": "bob_grunt_heavy_2.wav",
+  "trigger": "heavy attack effort",
+  "text": "Haaah!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_grunt_heavy_3",
+  "speaker": "bob",
+  "file": "bob_grunt_heavy_3.wav",
+  "trigger": "heavy attack effort",
+  "text": "Rrrah!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_grunt_jump",
+  "speaker": "bob",
+  "file": "bob_grunt_jump.wav",
+  "trigger": "jump",
+  "text": "Hup!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_grunt_throw",
+  "speaker": "bob",
+  "file": "bob_grunt_throw.wav",
+  "trigger": "throw",
+  "text": "Hrrgh... down.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_pain_light_1",
+  "speaker": "bob",
+  "file": "bob_pain_light_1.wav",
+  "trigger": "light hit taken",
+  "text": "Ugh.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_pain_light_2",
+  "speaker": "bob",
+  "file": "bob_pain_light_2.wav",
+  "trigger": "light hit taken",
+  "text": "Nnh!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_pain_heavy_1",
+  "speaker": "bob",
+  "file": "bob_pain_heavy_1.wav",
+  "trigger": "heavy hit taken",
+  "text": "Gaaah!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_pain_heavy_2",
+  "speaker": "bob",
+  "file": "bob_pain_heavy_2.wav",
+  "trigger": "heavy hit taken",
+  "text": "Hhrk!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_launch",
+  "speaker": "bob",
+  "file": "bob_launch.wav",
+  "trigger": "launched",
+  "text": "Nngh... aah!",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_knockdown",
+  "speaker": "bob",
+  "file": "bob_knockdown.wav",
+  "trigger": "knockdown",
+  "text": "Oof.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_dizzy",
+  "speaker": "bob",
+  "file": "bob_dizzy.wav",
+  "trigger": "dizzy",
+  "text": "Mmh... recalibrating...",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_block",
+  "speaker": "bob",
+  "file": "bob_block.wav",
+  "trigger": "block",
+  "text": "Hmph.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_select_1",
+  "speaker": "bob",
+  "file": "bob_select_1.wav",
+  "trigger": "character select lock-in",
+  "text": "Agent Bob. Reporting.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_select_2",
+  "speaker": "bob",
+  "file": "bob_select_2.wav",
+  "trigger": "character select lock-in (alt)",
+  "text": "Assignment accepted.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_intro_1",
+  "speaker": "bob",
+  "file": "bob_intro_1.wav",
+  "trigger": "match intro (solo)",
+  "text": "Anomaly detected. Commencing correction.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_intro_2",
+  "speaker": "bob",
+  "file": "bob_intro_2.wav",
+  "trigger": "match intro (solo)",
+  "text": "You are a glitch in an otherwise perfect system.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_intro_3",
+  "speaker": "bob",
+  "file": "bob_intro_3.wav",
+  "trigger": "match intro (solo)",
+  "text": "I have reviewed your file. It is... sparkly.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_intro_4",
+  "speaker": "bob",
+  "file": "bob_intro_4.wav",
+  "trigger": "match intro (solo)",
+  "text": "Remove the feathers. Or I will.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_banter_1",
+  "speaker": "bob",
+  "file": "bob_banter_1.wav",
+  "trigger": "intro banter 1 (bob opens)",
+  "text": "Your sequins are a statistical anomaly, Cory. They will be audited.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_banter_2",
+  "speaker": "bob",
+  "file": "bob_banter_2.wav",
+  "trigger": "intro banter 2 (bob replies)",
+  "text": "I do not shop. I optimize. And I am inevitable.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_banter_3",
+  "speaker": "bob",
+  "file": "bob_banter_3.wav",
+  "trigger": "intro banter 3 (bob opens)",
+  "text": "You hear that, Cory? That is the sound of inevitability.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_banter_4",
+  "speaker": "bob",
+  "file": "bob_banter_4.wav",
+  "trigger": "intro banter 4 (bob replies)",
+  "text": "Step into my hitbox and find out.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_banter_5",
+  "speaker": "bob",
+  "file": "bob_banter_5.wav",
+  "trigger": "intro banter 5 (bob opens)",
+  "text": "I have simulated this match ten thousand times. You lose in all of them.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_banter_6",
+  "speaker": "bob",
+  "file": "bob_banter_6.wav",
+  "trigger": "intro banter 6 (bob replies)",
+  "text": "Agents do not blush. Prepare for system purge.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_mirror_1",
+  "speaker": "bob",
+  "file": "bob_mirror_1.wav",
+  "trigger": "mirror match intro",
+  "text": "A rogue clone? Unacceptable.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_mirror_2",
+  "speaker": "bob",
+  "file": "bob_mirror_2.wav",
+  "trigger": "mirror match intro reply",
+  "text": "Correction: I am the upgrade.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_1",
+  "speaker": "bob",
+  "file": "bob_taunt_1.wav",
+  "trigger": "taunt",
+  "text": "Your style is noise. I am the signal.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_2",
+  "speaker": "bob",
+  "file": "bob_taunt_2.wav",
+  "trigger": "taunt",
+  "text": "Hm. Still inevitable.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_3",
+  "speaker": "bob",
+  "file": "bob_taunt_3.wav",
+  "trigger": "taunt",
+  "text": "Is that glitter? Or panic?",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_4",
+  "speaker": "bob",
+  "file": "bob_taunt_4.wav",
+  "trigger": "taunt",
+  "text": "Try harder. The algorithm is bored.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_5",
+  "speaker": "bob",
+  "file": "bob_taunt_5.wav",
+  "trigger": "taunt",
+  "text": "I have seen your next move. And the one after.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_6",
+  "speaker": "bob",
+  "file": "bob_taunt_6.wav",
+  "trigger": "taunt",
+  "text": "You cannot out-dance gravity.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_7",
+  "speaker": "bob",
+  "file": "bob_taunt_7.wav",
+  "trigger": "taunt",
+  "text": "Every sequin is a liability.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_taunt_8",
+  "speaker": "bob",
+  "file": "bob_taunt_8.wav",
+  "trigger": "taunt",
+  "text": "Please, continue. I am taking notes.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_palm_flurry",
+  "speaker": "bob",
+  "file": "bob_sp_palm_flurry.wav",
+  "trigger": "special: Blurred Palm Flurry",
+  "text": "Execute.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_palm_flurry_ex",
+  "speaker": "bob",
+  "file": "bob_sp_palm_flurry_ex.wav",
+  "trigger": "special: Palm Flurry EX",
+  "text": "Execute. Faster.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_teleport",
+  "speaker": "bob",
+  "file": "bob_sp_teleport.wav",
+  "trigger": "special: System Glitch Teleport",
+  "text": "Rerouting.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_eggplant",
+  "speaker": "bob",
+  "file": "bob_sp_eggplant.wav",
+  "trigger": "special: Digital Eggplant Toss",
+  "text": "Catch.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_eggplant_ex",
+  "speaker": "bob",
+  "file": "bob_sp_eggplant_ex.wav",
+  "trigger": "special: Eggplant Toss EX",
+  "text": "Double helping.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_clone",
+  "speaker": "bob",
+  "file": "bob_sp_clone.wav",
+  "trigger": "special: Agent Clone Grapple",
+  "text": "Agents. Restrain him.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_lean",
+  "speaker": "bob",
+  "file": "bob_sp_lean.wav",
+  "trigger": "special: Bullet-Time Lean Counter",
+  "text": "Too slow.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_sp_dive",
+  "speaker": "bob",
+  "file": "bob_sp_dive.wav",
+  "trigger": "special: Aerial Matrix Dive",
+  "text": "From above.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_wakeup",
+  "speaker": "bob",
+  "file": "bob_wakeup.wav",
+  "trigger": "armored wakeup kick",
+  "text": "Get off me.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_combo_breaker",
+  "speaker": "bob",
+  "file": "bob_combo_breaker.wav",
+  "trigger": "combo breaker",
+  "text": "Denied.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_fb_1",
+  "speaker": "bob",
+  "file": "bob_fb_1.wav",
+  "trigger": "fatal blow start",
+  "text": "System purge initiated.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_fb_2",
+  "speaker": "bob",
+  "file": "bob_fb_2.wav",
+  "trigger": "fatal blow mid",
+  "text": "Delete.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_fb_3",
+  "speaker": "bob",
+  "file": "bob_fb_3.wav",
+  "trigger": "fatal blow end",
+  "text": "You were never authorized.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_fatality_1",
+  "speaker": "bob",
+  "file": "bob_fatality_1.wav",
+  "trigger": "fatality start",
+  "text": "Order up.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_fatality_2",
+  "speaker": "bob",
+  "file": "bob_fatality_2.wav",
+  "trigger": "fatality mid (eggplants appear)",
+  "text": "One Inevitable Parm. Extra cheese.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_fatality_3",
+  "speaker": "bob",
+  "file": "bob_fatality_3.wav",
+  "trigger": "fatality end",
+  "text": "Dinner is served. From orbit.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_brutality",
+  "speaker": "bob",
+  "file": "bob_brutality.wav",
+  "trigger": "brutality",
+  "text": "Parmesan override. Approved.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_round_win",
+  "speaker": "bob",
+  "file": "bob_round_win.wav",
+  "trigger": "round won",
+  "text": "Round logged.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_finish_line",
+  "speaker": "bob",
+  "file": "bob_finish_line.wav",
+  "trigger": "finish him phase (bob is winner)",
+  "text": "Stand still. This is for your own good.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_1",
+  "speaker": "bob",
+  "file": "bob_win_1.wav",
+  "trigger": "win quote",
+  "text": "System anomaly resolved. Have a productive evening.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_2",
+  "speaker": "bob",
+  "file": "bob_win_2.wav",
+  "trigger": "win quote",
+  "text": "The beard remains unruffled. Inevitable.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_3",
+  "speaker": "bob",
+  "file": "bob_win_3.wav",
+  "trigger": "win quote",
+  "text": "You fought bravely. The algorithm did not care.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_4",
+  "speaker": "bob",
+  "file": "bob_win_4.wav",
+  "trigger": "win quote",
+  "text": "Your feathers have been filed as evidence.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_5",
+  "speaker": "bob",
+  "file": "bob_win_5.wav",
+  "trigger": "win quote",
+  "text": "Next time, bring a plan. Not a playlist.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_6",
+  "speaker": "bob",
+  "file": "bob_win_6.wav",
+  "trigger": "win quote",
+  "text": "Match concluded. Disco remains... tolerated.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_7",
+  "speaker": "bob",
+  "file": "bob_win_7.wav",
+  "trigger": "win quote",
+  "text": "I did not break a sweat. I do not have sweat.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_8",
+  "speaker": "bob",
+  "file": "bob_win_8.wav",
+  "trigger": "win quote",
+  "text": "Flawless. Like my tie.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_win_9",
+  "speaker": "bob",
+  "file": "bob_win_9.wav",
+  "trigger": "win quote",
+  "text": "Go home, Cory. Dance it off.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_lose_1",
+  "speaker": "bob",
+  "file": "bob_lose_1.wav",
+  "trigger": "defeat",
+  "text": "This... was not in the simulation.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_lose_2",
+  "speaker": "bob",
+  "file": "bob_lose_2.wav",
+  "trigger": "defeat",
+  "text": "Reboot... required.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_lose_3",
+  "speaker": "bob",
+  "file": "bob_lose_3.wav",
+  "trigger": "defeat",
+  "text": "Fine. One dance. Do not tell anyone.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_story_1",
+  "speaker": "bob",
+  "file": "bob_story_1.wav",
+  "trigger": "story intro still 02",
+  "text": "Directive received. Anomaly located.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_story_3",
+  "speaker": "bob",
+  "file": "bob_story_3.wav",
+  "trigger": "story chapter 4",
+  "text": "Your disco ends tonight.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "bob_story_4",
+  "speaker": "bob",
+  "file": "bob_story_4.wav",
+  "trigger": "bob ending still 04",
+  "text": "Some anomalies are worth keeping.",
+  "source": "openai:gpt-4o-mini-tts:onyx"
+ },
+ {
+  "id": "cory_grunt_light_1",
+  "speaker": "cory",
+  "file": "cory_grunt_light_1.wav",
+  "trigger": "light attack effort",
+  "text": "Hah!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_grunt_light_2",
+  "speaker": "cory",
+  "file": "cory_grunt_light_2.wav",
+  "trigger": "light attack effort",
+  "text": "Hya!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_grunt_heavy_1",
+  "speaker": "cory",
+  "file": "cory_grunt_heavy_1.wav",
+  "trigger": "heavy attack effort",
+  "text": "Hiyaaah!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_grunt_heavy_2",
+  "speaker": "cory",
+  "file": "cory_grunt_heavy_2.wav",
+  "trigger": "heavy attack effort",
+  "text": "Hnnngh-HA!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_grunt_heavy_3",
+  "speaker": "cory",
+  "file": "cory_grunt_heavy_3.wav",
+  "trigger": "heavy attack effort",
+  "text": "Werk!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_grunt_jump",
+  "speaker": "cory",
+  "file": "cory_grunt_jump.wav",
+  "trigger": "jump",
+  "text": "Hup-la!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_grunt_throw",
+  "speaker": "cory",
+  "file": "cory_grunt_throw.wav",
+  "trigger": "throw",
+  "text": "And... dip!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_pain_light_1",
+  "speaker": "cory",
+  "file": "cory_pain_light_1.wav",
+  "trigger": "light hit taken",
+  "text": "Ow! Rude!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_pain_light_2",
+  "speaker": "cory",
+  "file": "cory_pain_light_2.wav",
+  "trigger": "light hit taken",
+  "text": "Ugh!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_pain_heavy_1",
+  "speaker": "cory",
+  "file": "cory_pain_heavy_1.wav",
+  "trigger": "heavy hit taken",
+  "text": "Aaah!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_pain_heavy_2",
+  "speaker": "cory",
+  "file": "cory_pain_heavy_2.wav",
+  "trigger": "heavy hit taken",
+  "text": "Oof! My feathers!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_launch",
+  "speaker": "cory",
+  "file": "cory_launch.wav",
+  "trigger": "launched",
+  "text": "Wheee... no!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_knockdown",
+  "speaker": "cory",
+  "file": "cory_knockdown.wav",
+  "trigger": "knockdown",
+  "text": "Ohhh, darling, no.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_dizzy",
+  "speaker": "cory",
+  "file": "cory_dizzy.wav",
+  "trigger": "dizzy",
+  "text": "Ooh, the room is spinning...",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_block",
+  "speaker": "cory",
+  "file": "cory_block.wav",
+  "trigger": "block",
+  "text": "Not the face!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_select_1",
+  "speaker": "cory",
+  "file": "cory_select_1.wav",
+  "trigger": "character select lock-in",
+  "text": "Flamboyant Cory. Obviously.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_select_2",
+  "speaker": "cory",
+  "file": "cory_select_2.wav",
+  "trigger": "character select lock-in (alt)",
+  "text": "Let's get glamorous!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_intro_1",
+  "speaker": "cory",
+  "file": "cory_intro_1.wav",
+  "trigger": "match intro (solo)",
+  "text": "Lights up, darling. Showtime!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_intro_2",
+  "speaker": "cory",
+  "file": "cory_intro_2.wav",
+  "trigger": "match intro (solo)",
+  "text": "Bob! You wore the suit again. I'm flattered.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_intro_4",
+  "speaker": "cory",
+  "file": "cory_intro_4.wav",
+  "trigger": "match intro (solo)",
+  "text": "Smile for the cameras, handsome. You're on my runway.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_banter_1",
+  "speaker": "cory",
+  "file": "cory_banter_1.wav",
+  "trigger": "intro banter 1 (cory replies)",
+  "text": "Ooh, talk spreadsheets to me, Bob. Just try not to crease that cute little suit!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_banter_2",
+  "speaker": "cory",
+  "file": "cory_banter_2.wav",
+  "trigger": "intro banter 2 (cory opens)",
+  "text": "Charcoal wool? Again? Honey, let me take you shopping after I win.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_banter_3",
+  "speaker": "cory",
+  "file": "cory_banter_3.wav",
+  "trigger": "intro banter 3 (cory replies)",
+  "text": "No darling, that's my disco bassline, and you're totally tapping your boot!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_banter_4",
+  "speaker": "cory",
+  "file": "cory_banter_4.wav",
+  "trigger": "intro banter 4 (cory opens)",
+  "text": "Nice shades, tall, dark and bearded. Mind if I steal the spotlight?",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_banter_5",
+  "speaker": "cory",
+  "file": "cory_banter_5.wav",
+  "trigger": "intro banter 5 (cory replies)",
+  "text": "Ten thousand simulations and you still didn't add feathers? Tragic!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_banter_6",
+  "speaker": "cory",
+  "file": "cory_banter_6.wav",
+  "trigger": "intro banter 6 (cory opens)",
+  "text": "Careful, Bob. One spin of this blazer and you'll be blushing under that beard.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_mirror_1",
+  "speaker": "cory",
+  "file": "cory_mirror_1.wav",
+  "trigger": "mirror match intro",
+  "text": "Wait, someone else wore plum feathers? Honestly, iconic.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_mirror_2",
+  "speaker": "cory",
+  "file": "cory_mirror_2.wav",
+  "trigger": "mirror match intro reply",
+  "text": "Flattering, babe, but there's only room for one Disco Sovereign!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_1",
+  "speaker": "cory",
+  "file": "cory_taunt_1.wav",
+  "trigger": "taunt",
+  "text": "Come on, handsome, smile! It won't crack your sunglasses.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_2",
+  "speaker": "cory",
+  "file": "cory_taunt_2.wav",
+  "trigger": "taunt",
+  "text": "Ooh, intimidating. Do it again, slower.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_3",
+  "speaker": "cory",
+  "file": "cory_taunt_3.wav",
+  "trigger": "taunt",
+  "text": "Charcoal is not a personality, sweetie.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_4",
+  "speaker": "cory",
+  "file": "cory_taunt_4.wav",
+  "trigger": "taunt",
+  "text": "I've had tougher dance partners. And they had two left feet.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_5",
+  "speaker": "cory",
+  "file": "cory_taunt_5.wav",
+  "trigger": "taunt",
+  "text": "Work it! No, no. Like this.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_6",
+  "speaker": "cory",
+  "file": "cory_taunt_6.wav",
+  "trigger": "taunt",
+  "text": "I could do this in heels. Actually, next time I will.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_7",
+  "speaker": "cory",
+  "file": "cory_taunt_7.wav",
+  "trigger": "taunt",
+  "text": "You're cute when you're calculating.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_taunt_8",
+  "speaker": "cory",
+  "file": "cory_taunt_8.wav",
+  "trigger": "taunt",
+  "text": "Catch me if you can, Mister Inevitable!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_glitter",
+  "speaker": "cory",
+  "file": "cory_sp_glitter.wav",
+  "trigger": "special: Glitter Bomb",
+  "text": "Sparkle!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_glitter_ex",
+  "speaker": "cory",
+  "file": "cory_sp_glitter_ex.wav",
+  "trigger": "special: Glitter Bomb EX",
+  "text": "Extra sparkle!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_runway",
+  "speaker": "cory",
+  "file": "cory_sp_runway.wav",
+  "trigger": "special: Runway Strut Dash",
+  "text": "Make way!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_runway_ex",
+  "speaker": "cory",
+  "file": "cory_sp_runway_ex.wav",
+  "trigger": "special: Runway Dash EX",
+  "text": "Clear the runway!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_disco_drop",
+  "speaker": "cory",
+  "file": "cory_sp_disco_drop.wav",
+  "trigger": "special: Disco Ball Drop",
+  "text": "Drop the ball!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_vogue",
+  "speaker": "cory",
+  "file": "cory_sp_vogue.wav",
+  "trigger": "special: Vogue Pose Parry",
+  "text": "Freeze! Gorgeous.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_boa",
+  "speaker": "cory",
+  "file": "cory_sp_boa.wav",
+  "trigger": "special: Boa Whip Lash",
+  "text": "Feather fury!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_sp_twirl",
+  "speaker": "cory",
+  "file": "cory_sp_twirl.wav",
+  "trigger": "special: Fabulous Air Twirl",
+  "text": "Twirl!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_wakeup",
+  "speaker": "cory",
+  "file": "cory_wakeup.wav",
+  "trigger": "armored wakeup kick",
+  "text": "Up, up, up!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_combo_breaker",
+  "speaker": "cory",
+  "file": "cory_combo_breaker.wav",
+  "trigger": "combo breaker",
+  "text": "Hands off the couture!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_fb_1",
+  "speaker": "cory",
+  "file": "cory_fb_1.wav",
+  "trigger": "fatal blow start",
+  "text": "Lights. Camera.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_fb_2",
+  "speaker": "cory",
+  "file": "cory_fb_2.wav",
+  "trigger": "fatal blow mid",
+  "text": "Say cheese, darling!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_fb_3",
+  "speaker": "cory",
+  "file": "cory_fb_3.wav",
+  "trigger": "fatal blow end",
+  "text": "Encore!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_fatality_1",
+  "speaker": "cory",
+  "file": "cory_fatality_1.wav",
+  "trigger": "fatality start",
+  "text": "The runway is open, darling!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_fatality_2",
+  "speaker": "cory",
+  "file": "cory_fatality_2.wav",
+  "trigger": "fatality mid (disco eggplant descends)",
+  "text": "Serve it! Aubergine realness!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_fatality_3",
+  "speaker": "cory",
+  "file": "cory_fatality_3.wav",
+  "trigger": "fatality end",
+  "text": "And... bow.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_brutality",
+  "speaker": "cory",
+  "file": "cory_brutality.wav",
+  "trigger": "brutality",
+  "text": "Oops! Fabulous mess.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_round_win",
+  "speaker": "cory",
+  "file": "cory_round_win.wav",
+  "trigger": "round won",
+  "text": "Round's mine, darling!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_finish_line",
+  "speaker": "cory",
+  "file": "cory_finish_line.wav",
+  "trigger": "finish him phase (cory is winner)",
+  "text": "Hold still, sweetie. This will be quick.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_1",
+  "speaker": "cory",
+  "file": "cory_win_1.wav",
+  "trigger": "win quote",
+  "text": "Lights, camera, victory! Drinks are on me, Bob!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_2",
+  "speaker": "cory",
+  "file": "cory_win_2.wav",
+  "trigger": "win quote",
+  "text": "Don't pout, handsome. You still looked great losing!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_3",
+  "speaker": "cory",
+  "file": "cory_win_3.wav",
+  "trigger": "win quote",
+  "text": "That's how you own the runway, darling!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_4",
+  "speaker": "cory",
+  "file": "cory_win_4.wav",
+  "trigger": "win quote",
+  "text": "Ten out of ten. The judges are me.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_5",
+  "speaker": "cory",
+  "file": "cory_win_5.wav",
+  "trigger": "win quote",
+  "text": "Call me, Bob. We'll pick you a fun tie.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_6",
+  "speaker": "cory",
+  "file": "cory_win_6.wav",
+  "trigger": "win quote",
+  "text": "Glitter is forever. So is this win.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_7",
+  "speaker": "cory",
+  "file": "cory_win_7.wav",
+  "trigger": "win quote",
+  "text": "Was that a smile? Under the beard? I saw it!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_8",
+  "speaker": "cory",
+  "file": "cory_win_8.wav",
+  "trigger": "win quote",
+  "text": "Sequins one, spreadsheets zero!",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_win_9",
+  "speaker": "cory",
+  "file": "cory_win_9.wav",
+  "trigger": "win quote",
+  "text": "Thank you, thank you! No autographs. Okay, one.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_lose_1",
+  "speaker": "cory",
+  "file": "cory_lose_1.wav",
+  "trigger": "defeat",
+  "text": "Ugh, fine. But I looked amazing.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_lose_2",
+  "speaker": "cory",
+  "file": "cory_lose_2.wav",
+  "trigger": "defeat",
+  "text": "You crushed my feathers. And my heart.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_lose_3",
+  "speaker": "cory",
+  "file": "cory_lose_3.wav",
+  "trigger": "defeat",
+  "text": "Rematch! And this time, I pick the music.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_story_1",
+  "speaker": "cory",
+  "file": "cory_story_1.wav",
+  "trigger": "story intro still 03",
+  "text": "A golden eggplant trophy? Darling, it's practically my color.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_story_3",
+  "speaker": "cory",
+  "file": "cory_story_3.wav",
+  "trigger": "story chapter 4",
+  "text": "Let's give this desert something to talk about.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ },
+ {
+  "id": "cory_story_4",
+  "speaker": "cory",
+  "file": "cory_story_4.wav",
+  "trigger": "cory ending still 03",
+  "text": "Hold still, handsome. Sequins are a commitment.",
+  "source": "openai:gpt-4o-mini-tts:ballad"
+ }
+]

@@ -63,15 +63,28 @@ export const MIRROR_BANTER: Record<FighterId, BanterExchange> = {
   },
 };
 
+// Every quote has a matching recorded line in voice-manifest.json (bob_win_N / cory_win_N).
 export const VICTORY_QUOTES: Record<FighterId, string[]> = {
   bob: [
-    'System anomaly resolved. Have a productive evening.',
-    'The beard remains unruffled. Inevitable.',
-    'You fought bravely. The algorithm did not care.',
+    "System anomaly resolved. Have a productive evening.",
+    "The beard remains unruffled. Inevitable.",
+    "You fought bravely. The algorithm did not care.",
+    "Your feathers have been filed as evidence.",
+    "Next time, bring a plan. Not a playlist.",
+    "Match concluded. Disco remains... tolerated.",
+    "I did not break a sweat. I do not have sweat.",
+    "Flawless. Like my tie.",
+    "Go home, Cory. Dance it off.",
   ],
   cory: [
-    'Lights, camera, victory! Drinks are on me, Bob!',
-    'Don’t pout, handsome—you still looked great losing!',
-    'That’s how you own the runway, darling!',
+    "Lights, camera, victory! Drinks are on me, Bob!",
+    "Don't pout, handsome. You still looked great losing!",
+    "That's how you own the runway, darling!",
+    "Ten out of ten. The judges are me.",
+    "Call me, Bob. We'll pick you a fun tie.",
+    "Glitter is forever. So is this win.",
+    "Was that a smile? Under the beard? I saw it!",
+    "Sequins one, spreadsheets zero!",
+    "Thank you, thank you! No autographs. Okay, one.",
   ],
 };

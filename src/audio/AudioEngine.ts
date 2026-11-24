@@ -1,5 +1,6 @@
 import { GameSettings } from '../types/game';
 import { StageDefinition } from '../data/stages';
+import { VoiceBank, announcerClipForText } from './VoiceBank';
 
 export class AudioEngine {
   private ctx: AudioContext | null = null;
@@ -14,8 +15,14 @@ export class AudioEngine {
   private intenseMode = false;
   private settings: GameSettings;
 
+  /** Recorded voice clips (ElevenLabs announcer + OpenAI TTS fighters). */
+  public readonly voices: VoiceBank;
+
   constructor(settings: GameSettings) {
     this.settings = { ...settings };
+    this.voices = new VoiceBank(() =>
+      this.ctx && this.voiceBus ? { ctx: this.ctx, bus: this.voiceBus } : null
+    );
   }
 
   public unlock(): void {
@@ -294,10 +301,14 @@ export class AudioEngine {
     this.playTone(540, 0.05, 'triangle', 0.15, this.sfxBus, 1800);
   }
 
-  public speakAnnouncer(text: string): void {
+  public speakAnnouncer(text: string, isFinalRound: boolean = false): void {
     // Safety guard: announcer NEVER says "K.O."!
     const clean = text.replace(/\bK\.?O\.?\b/gi, 'VICTORY');
     this.playGong();
+
+    // Prefer the recorded announcer (Jason clone via ElevenLabs).
+    const clip = announcerClipForText(clean, isFinalRound);
+    if (clip && this.voices.play(clip)) return;
 
     // Optional Web Speech API announcer voice with clean fallback
     if (

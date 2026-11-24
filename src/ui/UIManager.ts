@@ -1,4 +1,5 @@
 import { VICTORY_QUOTES } from '../data/banter';
+import { idsWithPrefix } from '../audio/VoiceBank';
 import { STAGES } from '../data/stages';
 import { CombatEngine } from '../engine/CombatEngine';
 import { FIGHTER_DEFS } from '../engine/Fighter';
@@ -21,6 +22,13 @@ export type ScreenName =
   | 'moves'
   | 'settings';
 
+const STAGE_CALLS: Record<string, string> = {
+  'matrix-subway': 'ann_stage_subway',
+  'disco-penthouse': 'ann_stage_penthouse',
+  'eggplant-colosseum': 'ann_stage_colosseum',
+  'scottsdale-lounge': 'ann_stage_lounge',
+};
+
 export interface UICallbacks {
   onStartMatch: (config: MatchConfig) => void;
   onRematch: () => void;
@@ -30,6 +38,10 @@ export interface UICallbacks {
   onSettingsChanged: (settings: GameSettings) => void;
   onPauseToggle: (paused: boolean) => void;
   onClickSound: () => void;
+  /** Play a recorded voice clip by id (announcer menu calls, select lines). */
+  onVoice?: (clipId: string, delayMs?: number) => void;
+  /** The exact victory quote shown on the result card, so it can be voiced. */
+  onVictoryQuote?: (fighter: FighterId, quote: string) => void;
 }
 
 export class UIManager {
@@ -110,17 +122,31 @@ export class UIManager {
     `;
 
     this.bindButtons({
-      'mode-vs-cpu': () => this.openSelect('vs-cpu'),
-      'mode-vs-p2': () => this.openSelect('vs-p2'),
-      'mode-arcade': () => this.openSelect('arcade'),
-      'mode-training': () => this.openSelect('training'),
-      'mode-cpu-vs-cpu': () => this.openSelect('cpu-vs-cpu'),
+      'mode-vs-cpu': () => { this.voice('ann_menu_versus'); this.openSelect('vs-cpu'); },
+      'mode-vs-p2': () => { this.voice('ann_menu_versus'); this.openSelect('vs-p2'); },
+      'mode-arcade': () => { this.voice('ann_menu_arcade'); this.openSelect('arcade'); },
+      'mode-training': () => { this.voice('ann_menu_training'); this.openSelect('training'); },
+      'mode-cpu-vs-cpu': () => { this.voice('ann_menu_versus'); this.openSelect('cpu-vs-cpu'); },
       'open-moves': () => this.showMovesScreen(),
       'open-settings': () => this.showSettingsScreen(),
     });
   }
 
+  private voice(clipId: string, delayMs?: number): void {
+    this.callbacks.onVoice?.(clipId, delayMs);
+  }
+
+  private selectLineToggle = 0;
+  private announceFighter(id: FighterId): void {
+    this.voice(id === 'bob' ? 'ann_select_bob' : 'ann_select_cory');
+    // The fighter answers: alternate lock-in lines and solo intros.
+    const pool = [...idsWithPrefix(`${id}_select_`), ...idsWithPrefix(`${id}_intro_`)];
+    if (pool.length === 0) return;
+    this.voice(pool[this.selectLineToggle++ % pool.length], 1500);
+  }
+
   public openSelect(mode: GameMode): void {
+    if (this.screen !== 'select') this.voice('ann_select_prompt', 900);
     this.draft.mode = mode;
     if (mode === 'arcade') {
       this.draft.arcadeStageIndex = 0;
@@ -232,12 +258,15 @@ export class UIManager {
 
     const handlers: Record<string, () => void> = {
       'back-title': () => this.showTitle(),
-      'p1-bob': () => { this.draft.p1Fighter = 'bob'; this.draft.p1Palette = 0; this.renderSelectScreen(); },
-      'p1-cory': () => { this.draft.p1Fighter = 'cory'; this.draft.p1Palette = 0; this.renderSelectScreen(); },
-      'p2-bob': () => { this.draft.p2Fighter = 'bob'; this.draft.p2Palette = 0; this.renderSelectScreen(); },
-      'p2-cory': () => { this.draft.p2Fighter = 'cory'; this.draft.p2Palette = 0; this.renderSelectScreen(); },
+      'p1-bob': () => { this.draft.p1Fighter = 'bob'; this.draft.p1Palette = 0; this.announceFighter('bob'); this.renderSelectScreen(); },
+      'p1-cory': () => { this.draft.p1Fighter = 'cory'; this.draft.p1Palette = 0; this.announceFighter('cory'); this.renderSelectScreen(); },
+      'p2-bob': () => { this.draft.p2Fighter = 'bob'; this.draft.p2Palette = 0; this.announceFighter('bob'); this.renderSelectScreen(); },
+      'p2-cory': () => { this.draft.p2Fighter = 'cory'; this.draft.p2Palette = 0; this.announceFighter('cory'); this.renderSelectScreen(); },
       'toggle-easy-fatality': () => { this.draft.easyFatality = !this.draft.easyFatality; this.renderSelectScreen(); },
-      'start-fight': () => this.callbacks.onStartMatch({ ...this.draft }),
+      'start-fight': () => {
+        this.voice(this.draft.mode === 'arcade' ? 'ann_tower_start' : 'ann_versus');
+        this.callbacks.onStartMatch({ ...this.draft });
+      },
     };
 
     for (let i = 0; i < 4; i++) {
@@ -245,7 +274,7 @@ export class UIManager {
       handlers[`p2-pal-${i}`] = () => { this.draft.p2Palette = i; this.renderSelectScreen(); };
     }
     STAGES.forEach((st) => {
-      handlers[`stage-${st.id}`] = () => { this.draft.stage = st.id as StageId; this.renderSelectScreen(); };
+      handlers[`stage-${st.id}`] = () => { this.draft.stage = st.id as StageId; this.voice(STAGE_CALLS[st.id] ?? 'ann_stage_prompt'); this.renderSelectScreen(); };
     });
     (['easy', 'normal', 'hard', 'very-hard'] as AIDifficulty[]).forEach((d) => {
       handlers[`ai-${d}`] = () => { this.draft.aiDifficulty = d; this.renderSelectScreen(); };
@@ -798,6 +827,7 @@ export class UIManager {
     const winner = engine.fighters[engine.winnerIndex];
     const quotes = VICTORY_QUOTES[winner.id];
     const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    this.callbacks.onVictoryQuote?.(winner.id, quote);
     const isArcadeContinue =
       engine.config.mode === 'arcade' &&
       engine.winnerIndex === 0 &&
@@ -825,7 +855,7 @@ export class UIManager {
 
     this.bindButtons({
       'arcade-next': () => this.callbacks.onNextArcadeStage(),
-      'vic-rematch': () => this.callbacks.onRematch(),
+      'vic-rematch': () => { this.voice('ann_rematch'); this.callbacks.onRematch(); },
       'vic-select': () => this.callbacks.onReturnSelect(),
       'vic-title': () => this.callbacks.onReturnTitle(),
     });

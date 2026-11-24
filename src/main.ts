@@ -1,6 +1,7 @@
 import './style.css';
 import { Application, Container } from 'pixi.js';
 import { AudioEngine } from './audio/AudioEngine';
+import { VoiceDirector } from './audio/VoiceDirector';
 import { getStageById, STAGES } from './data/stages';
 import { AIController } from './engine/AIController';
 import { CombatEngine } from './engine/CombatEngine';
@@ -25,6 +26,7 @@ class BobVsCoryApp {
   private inputRouter = new InputRouter();
   private save = loadSaveData();
   private audio = new AudioEngine(this.save.settings);
+  private voiceDirector = new VoiceDirector(this.audio.voices);
   private ui!: UIManager;
 
   private engine: CombatEngine | null = null;
@@ -84,6 +86,11 @@ class BobVsCoryApp {
         onSettingsChanged: (s) => this.applySettings(s),
         onPauseToggle: (p) => { this.paused = p; },
         onClickSound: () => this.audio.playUIClick(),
+        onVoice: (clipId, delayMs) => {
+          this.audio.unlock();
+          this.audio.voices.play(clipId, { delayMs });
+        },
+        onVictoryQuote: (fighter, quote) => this.voiceDirector.speakVictoryQuote(fighter, quote),
       },
       this.inputRouter,
       this.save
@@ -119,6 +126,8 @@ class BobVsCoryApp {
 
   private stopMatch(): void {
     this.engine = null;
+    this.voiceDirector.detach();
+    this.audio.voices.stopAll();
     this.paused = false;
     this.vfxRenderer.clear();
     this.camera.reset();
@@ -151,6 +160,7 @@ class BobVsCoryApp {
     const nextIdx = (this.currentConfig.arcadeStageIndex ?? 0) + 1;
     const difficulties: AIDifficulty[] = ['easy', 'normal', 'hard', 'very-hard'];
     const nextStage = STAGES[nextIdx % STAGES.length];
+    if (nextIdx === STAGES.length - 1) this.audio.voices.play('ann_tower_rival');
     const nextOpp = nextIdx % 2 === 1 ? this.currentConfig.p1Fighter : this.currentConfig.p1Fighter === 'bob' ? 'cory' : 'bob';
 
     await this.startMatch({
@@ -203,12 +213,14 @@ class BobVsCoryApp {
           this.audio.playEggplantSplat();
           break;
         case 'announcer':
-          if (ev.text) this.audio.speakAnnouncer(ev.text);
+          if (ev.text) this.audio.speakAnnouncer(ev.text, isFinalRound);
           break;
         default:
           break;
       }
     }
+
+    this.voiceDirector.update(engine, engine.events);
 
     // Record persistent save stats once per completed match
     if (engine.phase === 'match_over' && !this.matchRecorded && engine.winnerIndex !== null) {
@@ -232,6 +244,7 @@ class BobVsCoryApp {
         (engine.config.arcadeStageIndex ?? 0) >= STAGES.length - 1
       ) {
         this.save.arcadeClears++;
+        this.audio.voices.play('ann_tower_complete', { delayMs: 5200 });
         persistSaveData(this.save);
       }
       this.ui.setSave(this.save);
