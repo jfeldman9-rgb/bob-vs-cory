@@ -1,0 +1,145 @@
+{
+ "block": {
+  "file": "block.png",
+  "w": 1407,
+  "h": 2048,
+  "pivotX": 705.4,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "015_bob_block.jpeg",
+  "headOffset": 64.4
+ },
+ "crouch": {
+  "file": "crouch.png",
+  "w": 1139,
+  "h": 2048,
+  "pivotX": 513.0,
+  "baselineY": 1966,
+  "figureH": 1352,
+  "standH": 1802,
+  "src": "013_bob_crouch.jpeg",
+  "headOffset": 89.2
+ },
+ "dash": {
+  "file": "dash.png",
+  "w": 1902,
+  "h": 2048,
+  "pivotX": 1162.7,
+  "baselineY": 1966,
+  "figureH": 1622,
+  "standH": 1802,
+  "src": "009_bob_dash.jpeg",
+  "headOffset": 127.7
+ },
+ "idle_01": {
+  "file": "idle_01.png",
+  "w": 1407,
+  "h": 2048,
+  "pivotX": 705.7,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "001_bob_idle_01.jpeg",
+  "headOffset": -2.8
+ },
+ "idle_02": {
+  "file": "idle_02.png",
+  "w": 1407,
+  "h": 2048,
+  "pivotX": 705.1,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "002_bob_idle_02.jpeg",
+  "headOffset": -2.9
+ },
+ "idle_03": {
+  "file": "idle_03.png",
+  "w": 1407,
+  "h": 2048,
+  "pivotX": 705.5,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "003_bob_idle_03.jpeg",
+  "headOffset": -3.7
+ },
+ "jump_apex": {
+  "file": "jump_apex.png",
+  "w": 1391,
+  "h": 2048,
+  "pivotX": 736.4,
+  "baselineY": 1966,
+  "figureH": 1766,
+  "standH": 1802,
+  "src": "011_bob_jump_apex.jpeg",
+  "headOffset": 92.3
+ },
+ "jump_fall": {
+  "file": "jump_fall.png",
+  "w": 1530,
+  "h": 2048,
+  "pivotX": 806.8,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "012_bob_jump_fall.jpeg",
+  "headOffset": -55.3
+ },
+ "jump_takeoff": {
+  "file": "jump_takeoff.png",
+  "w": 1378,
+  "h": 2048,
+  "pivotX": 700.2,
+  "baselineY": 1966,
+  "figureH": 1694,
+  "standH": 1802,
+  "src": "010_bob_jump_takeoff.jpeg",
+  "headOffset": 73.6
+ },
+ "walk_02": {
+  "file": "walk_02.png",
+  "w": 1038,
+  "h": 2048,
+  "pivotX": 488.3,
+  "baselineY": 1966,
+  "figureH": 1874,
+  "standH": 1802,
+  "src": "005_bob_walk_02.jpeg",
+  "headOffset": 1.1
+ },
+ "walk_03": {
+  "file": "walk_03.png",
+  "w": 1038,
+  "h": 2048,
+  "pivotX": 488.4,
+  "baselineY": 1966,
+  "figureH": 1874,
+  "standH": 1802,
+  "src": "006_bob_walk_03.jpeg",
+  "headOffset": 1.0
+ },
+ "walk_04": {
+  "file": "walk_04.png",
+  "w": 1038,
+  "h": 2048,
+  "pivotX": 488.4,
+  "baselineY": 1966,
+  "figureH": 1874,
+  "standH": 1802,
+  "src": "007_bob_walk_04.jpeg",
+  "headOffset": 1.0
+ },
+ "walk_back": {
+  "file": "walk_back.png",
+  "w": 1425,
+  "h": 2048,
+  "pivotX": 714.8,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "008_bob_walk_back.jpeg",
+  "headOffset": -5.6
+ }
+}

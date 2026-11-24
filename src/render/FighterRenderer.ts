@@ -2,6 +2,7 @@ import { Assets, ColorMatrixFilter, Container, Graphics, Sprite, Texture } from 
 import { Fighter } from '../engine/Fighter';
 import { GROUND_Y } from '../engine/constants';
 import { FighterId, PoseName } from '../types/game';
+import { FRAME_SETS, STAND_WORLD_H, frameUrl, pickFrame } from './FrameSets';
 
 const SPRITE_PATHS: Record<FighterId, Record<PoseName, string>> = {
   bob: {
@@ -30,6 +31,8 @@ export class FighterRenderer {
     bob: {},
     cory: {},
   };
+  /** v2 painted frames keyed by frame name (see FrameSets.ts). */
+  private frameTextures: Record<FighterId, Record<string, Texture>> = { bob: {}, cory: {} };
 
   private shadowGfx = new Graphics();
   private afterimageLayer = new Container();
@@ -70,6 +73,20 @@ export class FighterRenderer {
         );
       });
     });
+    (Object.keys(FRAME_SETS) as FighterId[]).forEach((fid) => {
+      const set = FRAME_SETS[fid]!;
+      for (const [name, meta] of Object.entries(set)) {
+        jobs.push(
+          Assets.load<Texture>(frameUrl(fid, meta))
+            .then((tex) => {
+              this.frameTextures[fid][name] = tex;
+            })
+            .catch(() => {
+              // Missing v2 frame -> v1 pose fallback at render time
+            })
+        );
+      }
+    });
     await Promise.all(jobs);
     this.loaded = true;
   }
@@ -94,9 +111,18 @@ export class FighterRenderer {
       const f = fighters[i];
       const sp = this.spritePair[i];
       const pose = f.getCurrentPose();
-      const tex = this.textures[f.id][pose] ?? this.textures[f.id].idle;
+      const frameName = pickFrame(f, globalTick + i * 7);
+      const frameTex = frameName ? this.frameTextures[f.id][frameName] : undefined;
+      const frameMeta = frameName && frameTex ? FRAME_SETS[f.id]![frameName] : undefined;
+      const tex = frameTex ?? this.textures[f.id][pose] ?? this.textures[f.id].idle;
       if (tex) {
         sp.texture = tex;
+      }
+      if (frameMeta) {
+        // Painted v2 frame: anchor at the body pivot and feet baseline recorded by process-art.
+        sp.anchor.set(frameMeta.pivotX / frameMeta.w, frameMeta.baselineY / frameMeta.h);
+      } else {
+        sp.anchor.set(0.5, 1.0);
       }
 
       // Ground contact shadow (shrinks when airborne)
@@ -120,8 +146,9 @@ export class FighterRenderer {
       }
 
       // Base sprite height ~270px in world coordinates (540px * 0.5)
-      let baseScaleX = 0.52;
-      let baseScaleY = 0.52;
+      const v2Scale = frameMeta ? STAND_WORLD_H / frameMeta.standH : 0.52;
+      let baseScaleX = v2Scale;
+      let baseScaleY = v2Scale;
       let offsetY = 0;
       let offsetX = 0;
       let rot = 0;
@@ -129,18 +156,20 @@ export class FighterRenderer {
       // Dynamic procedural animation polish per FSM state!
       if (f.state === 'idle') {
         const breath = Math.sin(globalTick * 0.09 + i * 2) * 0.015;
-        baseScaleY += breath;
-        baseScaleX -= breath * 0.6;
+        // Relative so it reads the same for v1 (0.52) and v2 (~0.15) sprite scales.
+        baseScaleY *= 1 + breath / 0.52;
+        baseScaleX *= 1 - (breath * 0.6) / 0.52;
       } else if (f.state === 'walk_fwd' || f.state === 'walk_back') {
         const stride = Math.sin(globalTick * 0.28);
         offsetY = -Math.abs(stride) * 7;
         rot = (f.state === 'walk_fwd' ? 0.05 : -0.05) * f.facing;
-      } else if (f.state === 'crouch' || f.state === 'block_crouch') {
+      } else if ((f.state === 'crouch' || f.state === 'block_crouch') && !frameMeta) {
+        // v1 sprites have no crouch art for every case, so squash; v2 crouch frames are painted crouched.
         baseScaleY *= f.id === 'cory' ? 0.78 : 0.86;
         baseScaleX *= 1.06;
       } else if (f.state === 'jump') {
-        rot = f.vy * 0.008 * f.facing;
-        baseScaleY *= 1.04;
+        rot = f.vy * (frameMeta ? 0.003 : 0.008) * f.facing;
+        if (!frameMeta) baseScaleY *= 1.04;
       } else if (f.state === 'attack' || f.state === 'fatal_blow') {
         const lunge = Math.sin(Math.min(1, f.moveFrame / 8) * Math.PI) * 14;
         offsetX = f.facing * lunge;

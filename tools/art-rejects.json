@@ -1,0 +1,6 @@
+{
+ "_doc": "Raw frames that must not be shipped (file name stem of the target), with the reason. The processor skips them and deletes any old output.",
+ "bob/walk_01": "Near pixel-identical to idle_01 (mean diff 1-5/255); no contact pose. Re-roll.",
+ "bob/fp_01": "Pixel-identical to idle_02 (diff 1.4/255): no punch wind-up. Re-roll.",
+ "bob/crouch_block": "Gemini drew a small standing block, not a crouching block. Keep v1 block fallback; re-roll."
+}
