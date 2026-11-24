@@ -1,0 +1,22 @@
+{
+  "name": "bob-vs-cory-mk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agent Bob vs Flamboyant Cory — A Mortal Kombat-style 2.5D fighting game",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "pixi.js": "^8.6.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
+  }
+}
