@@ -101,6 +101,11 @@ class BobVsCoryApp {
 
     this.ui.showTitle();
 
+    // ?debug exposes the app for headless playtests (tools drive Finish Him / Fatality).
+    if (new URLSearchParams(window.location.search).has('debug')) {
+      (window as unknown as { __bvc: unknown }).__bvc = this;
+    }
+
     window.addEventListener('keydown', (e) => {
       if (e.code === 'Escape' && this.engine && this.ui.screen === 'match') {
         this.ui.togglePause(this.engine);

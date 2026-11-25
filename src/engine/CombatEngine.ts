@@ -853,6 +853,10 @@ export class CombatEngine {
       return; // Defender powers through hit!
     }
 
+    // Presentation only (v2 hit-reaction frames): where the hit landed and whether the defender was low.
+    def.lastHitHeight = move.height;
+    def.lastHitCrouching = def.state === 'crouch' || def.state === 'block_crouch' || def.currentMove?.pose === 'crouch';
+
     // Cancel defender's active move
     def.currentMove = null;
 

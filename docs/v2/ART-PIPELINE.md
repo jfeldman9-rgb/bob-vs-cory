@@ -25,3 +25,28 @@ Attack frames per move: `src/data/attack-frames.json` (startup -> *_01, active/r
 air attacks, crouch pokes d_1/d_3, uppercut d_2, low kick s_b23, finisher hits s_112/s_212.
 Hitbox check: `python3 tools/hitbox-check.py ../shots/v2-bob-hitbox-check.png`. Punch/kick reach matches the hitboxes'
 far edge (kicks overshoot ~25 px), but the art strikes at head height while mid hitboxes sit at chest height (gameplay unchanged).
+
+## Batch 3 (ChatGPT web, 2026-11-24): 10 Bob frames, all accepted
+
+| Frame | Shown for |
+|---|---|
+| crouch_poke | d_1 active (startup uses crouch) |
+| uppercut | d_2 active. Ratio lowered from 1.12 to 1.08 so the raised fist stays inside the 2048 px canvas. |
+| jump_punch | j_1 |
+| jump_kick | j_3 and the aerial_dive active frames |
+| throw_grab / throw_toss | Throw: grab until the throw connects (`moveHasHit`), then toss |
+| hit_high / hit_body / hit_crouch | hitstun |
+| launch | the launch state |
+
+- d_3 (Shin Check) now reuses the sweep frame.
+- Which hit frame plays depends on the presentation-only fields `Fighter.lastHitHeight` and `lastHitCrouching`, set in `applyHit`:
+  - high or overhead hits use hit_high
+  - other standing hits use hit_body
+  - hits while crouching use hit_crouch
+
+### Known flags
+
+- The tie flies up in jump_punch and launch. That reads fine for airborne poses.
+- throw_toss is a twisting follow-through, not a clear toss.
+
+Hitbox check: `shots/v2-bob-hitbox-check.png`.

@@ -38,6 +38,24 @@ describe('v2 frame sets', () => {
     expect(atk('s_b23', 3)).toBeNull();
     expect(pickFrame({ id: 'cory', state: 'idle', vy: 0 }, 0)).toBeNull();
   });
+  it('batch 3: crouch poke, uppercut, air attacks, throws, hit reactions, launch', () => {
+    const mv = (id: string, category = 'normal', startup = 8) => ({ id, startup, category }) as never;
+    const atk = (id: string, moveFrame: number, category?: string, moveHasHit = false) =>
+      pickFrame({ id: 'bob', state: 'attack', vy: 0, currentMove: mv(id, category), moveFrame, moveHasHit }, 0);
+    expect(atk('d_1', 2)).toBe('crouch');
+    expect(atk('d_1', 9)).toBe('crouch_poke');
+    expect(atk('d_2', 9)).toBe('uppercut');
+    expect(atk('j_1', 3)).toBe('jump_punch');
+    expect(atk('j_3', 9)).toBe('jump_kick');
+    expect(atk('throw', 3, 'throw')).toBe('throw_grab');
+    expect(atk('throw', 12, 'throw', true)).toBe('throw_toss');
+    const hit = (lastHitHeight: string, lastHitCrouching = false) =>
+      pickFrame({ id: 'bob', state: 'hitstun', vy: 0, lastHitHeight: lastHitHeight as never, lastHitCrouching }, 0);
+    expect(hit('high')).toBe('hit_high');
+    expect(hit('mid')).toBe('hit_body');
+    expect(hit('low', true)).toBe('hit_crouch');
+    expect(pickFrame({ id: 'bob', state: 'launch', vy: -5 }, 0)).toBe('launch');
+  });
   it('every attack-frame mapping points at real moves', async () => {
     const { ATTACK_FRAMES } = await import('../src/render/FrameSets');
     const fighters = (await import('../src/data/fighters.json')).default as unknown as Record<string, { moves: Record<string, unknown> }>;

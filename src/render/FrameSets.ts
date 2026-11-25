@@ -48,7 +48,8 @@ function cycle(frames: string[], tick: number, ticksPerFrame: number, set: Recor
  * Pure function of fighter state + render tick, so it never affects the simulation.
  */
 export function pickFrame(
-  f: Pick<Fighter, 'id' | 'state' | 'vy'> & Partial<Pick<Fighter, 'currentMove' | 'moveFrame'>>,
+  f: Pick<Fighter, 'id' | 'state' | 'vy'> &
+    Partial<Pick<Fighter, 'currentMove' | 'moveFrame' | 'moveHasHit' | 'lastHitHeight' | 'lastHitCrouching'>>,
   tick: number
 ): string | null {
   const set = FRAME_SETS[f.id];
@@ -77,11 +78,18 @@ export function pickFrame(
       const move = f.currentMove;
       const map = move ? ATTACK_FRAMES[f.id]?.[move.id] : undefined;
       if (!move || !map) return null;
+      if (move.category === 'throw') return has(f.moveHasHit ? 'throw_toss' : 'throw_grab');
       const inStartup = (f.moveFrame ?? 0) < move.startup;
       const first = inStartup ? map.startup : map.active;
       const second = inStartup ? map.active : map.startup;
       return has(first) ?? has(second);
     }
+    case 'hitstun':
+      if (f.lastHitCrouching) return has('hit_crouch') ?? has('hit_body');
+      if (f.lastHitHeight === 'high' || f.lastHitHeight === 'overhead') return has('hit_high') ?? has('hit_body');
+      return has('hit_body') ?? has('hit_high');
+    case 'launch':
+      return has('launch');
     case 'block_stand':
     case 'up_block':
     case 'flawless_block':

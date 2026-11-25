@@ -1,18 +1,85 @@
 {
-  "_doc": "v2 painted attack frames per move id. 'startup' shows during startup frames, 'active' during active+recovery. Missing frames fall back to the other key, then to the v1 pose sprite. Moves not listed (specials, air attacks, crouch pokes, s_b23 low kick) stay on v1.",
+  "_doc": "v2 painted attack frames per move id. 'startup' shows during startup frames, 'active' during active+recovery. Missing frames fall back to the other key, then to the v1 pose sprite. Throws use throw_grab until the grab connects, then throw_toss (FrameSets.pickFrame). Moves not listed (most specials, s_b23 low kick) stay on v1.",
   "bob": {
-    "n_1": { "startup": "fp_01", "active": "fp_02" },
-    "s_11": { "startup": "fp_01", "active": "fp_02" },
-    "n_2": { "startup": "bp_01", "active": "bp_02" },
-    "s_12": { "startup": "bp_01", "active": "bp_02" },
-    "s_21": { "startup": "bp_01", "active": "bp_02" },
-    "b_2": { "startup": "bp_01", "active": "bp_02" },
-    "n_3": { "startup": "fk_01", "active": "fk_02" },
-    "n_4": { "startup": "bk_01", "active": "bk_02" },
-    "s_34": { "startup": "bk_01", "active": "bk_02" },
-    "s_124": { "startup": "bk_01", "active": "bk_02" },
-    "s_b234": { "startup": "bk_01", "active": "bk_02" },
-    "wakeup_kick": { "startup": "fk_01", "active": "fk_02" },
-    "d_4": { "startup": "sweep", "active": "sweep" }
+    "n_1": {
+      "startup": "fp_01",
+      "active": "fp_02"
+    },
+    "s_11": {
+      "startup": "fp_01",
+      "active": "fp_02"
+    },
+    "n_2": {
+      "startup": "bp_01",
+      "active": "bp_02"
+    },
+    "s_12": {
+      "startup": "bp_01",
+      "active": "bp_02"
+    },
+    "s_21": {
+      "startup": "bp_01",
+      "active": "bp_02"
+    },
+    "b_2": {
+      "startup": "bp_01",
+      "active": "bp_02"
+    },
+    "n_3": {
+      "startup": "fk_01",
+      "active": "fk_02"
+    },
+    "n_4": {
+      "startup": "bk_01",
+      "active": "bk_02"
+    },
+    "s_34": {
+      "startup": "bk_01",
+      "active": "bk_02"
+    },
+    "s_124": {
+      "startup": "bk_01",
+      "active": "bk_02"
+    },
+    "s_b234": {
+      "startup": "bk_01",
+      "active": "bk_02"
+    },
+    "wakeup_kick": {
+      "startup": "fk_01",
+      "active": "fk_02"
+    },
+    "d_4": {
+      "startup": "sweep",
+      "active": "sweep"
+    },
+    "d_1": {
+      "startup": "crouch",
+      "active": "crouch_poke"
+    },
+    "d_2": {
+      "startup": "crouch",
+      "active": "uppercut"
+    },
+    "d_3": {
+      "startup": "crouch",
+      "active": "sweep"
+    },
+    "j_1": {
+      "startup": "jump_punch",
+      "active": "jump_punch"
+    },
+    "j_3": {
+      "startup": "jump_kick",
+      "active": "jump_kick"
+    },
+    "aerial_dive": {
+      "startup": "jump_apex",
+      "active": "jump_kick"
+    },
+    "throw": {
+      "startup": "throw_grab",
+      "active": "throw_grab"
+    }
   }
 }

@@ -65,6 +65,17 @@
   "src": "013_bob_crouch.jpeg",
   "headOffset": 89.2
  },
+ "crouch_poke": {
+  "file": "crouch_poke.png",
+  "w": 1788,
+  "h": 2048,
+  "pivotX": 842.3,
+  "baselineY": 1966,
+  "figureH": 1261,
+  "standH": 1802,
+  "src": "024_bob_crouch_poke.png",
+  "headOffset": 27.1
+ },
  "dash": {
   "file": "dash.png",
   "w": 1902,
@@ -108,6 +119,39 @@
   "standH": 1802,
   "src": "017_bob_fp_02.png",
   "headOffset": 13.6
+ },
+ "hit_body": {
+  "file": "hit_body.png",
+  "w": 1235,
+  "h": 2048,
+  "pivotX": 626.2,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "032_bob_hit_body.png",
+  "headOffset": 208.6
+ },
+ "hit_crouch": {
+  "file": "hit_crouch.png",
+  "w": 1240,
+  "h": 2048,
+  "pivotX": 587.0,
+  "baselineY": 1966,
+  "figureH": 1261,
+  "standH": 1802,
+  "src": "033_bob_hit_crouch.png",
+  "headOffset": -211.7
+ },
+ "hit_high": {
+  "file": "hit_high.png",
+  "w": 1378,
+  "h": 2048,
+  "pivotX": 653.0,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "031_bob_hit_high.png",
+  "headOffset": -155.2
  },
  "idle_01": {
   "file": "idle_01.png",
@@ -164,6 +208,28 @@
   "src": "012_bob_jump_fall.jpeg",
   "headOffset": -55.3
  },
+ "jump_kick": {
+  "file": "jump_kick.png",
+  "w": 2174,
+  "h": 2048,
+  "pivotX": 957.2,
+  "baselineY": 1966,
+  "figureH": 1532,
+  "standH": 1802,
+  "src": "028_bob_jump_kick.png",
+  "headOffset": -333.6
+ },
+ "jump_punch": {
+  "file": "jump_punch.png",
+  "w": 1162,
+  "h": 2048,
+  "pivotX": 531.6,
+  "baselineY": 1966,
+  "figureH": 1532,
+  "standH": 1802,
+  "src": "027_bob_jump_punch.png",
+  "headOffset": -86.8
+ },
  "jump_takeoff": {
   "file": "jump_takeoff.png",
   "w": 1378,
@@ -175,6 +241,17 @@
   "src": "010_bob_jump_takeoff.jpeg",
   "headOffset": 73.6
  },
+ "launch": {
+  "file": "launch.png",
+  "w": 1865,
+  "h": 2048,
+  "pivotX": 838.1,
+  "baselineY": 1966,
+  "figureH": 1352,
+  "standH": 1802,
+  "src": "034_bob_launch.png",
+  "headOffset": -57.2
+ },
  "sweep": {
   "file": "sweep.png",
   "w": 1615,
@@ -185,6 +262,39 @@
   "standH": 1802,
   "src": "025_bob_sweep.png",
   "headOffset": 30.4
+ },
+ "throw_grab": {
+  "file": "throw_grab.png",
+  "w": 1492,
+  "h": 2048,
+  "pivotX": 747.5,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "029_bob_throw_grab.png",
+  "headOffset": 4.6
+ },
+ "throw_toss": {
+  "file": "throw_toss.png",
+  "w": 2028,
+  "h": 2048,
+  "pivotX": 826.8,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "030_bob_throw_toss.png",
+  "headOffset": 76.3
+ },
+ "uppercut": {
+  "file": "uppercut.png",
+  "w": 1112,
+  "h": 2048,
+  "pivotX": 618.8,
+  "baselineY": 1966,
+  "figureH": 1946,
+  "standH": 1802,
+  "src": "026_bob_uppercut.png",
+  "headOffset": 172.7
  },
  "walk_02": {
   "file": "walk_02.png",

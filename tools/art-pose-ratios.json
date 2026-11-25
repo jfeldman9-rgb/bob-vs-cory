@@ -51,7 +51,7 @@
   ],
   [
    "^uppercut$",
-   1.12
+   1.08
   ],
   [
    "^jump_(punch|kick)$",

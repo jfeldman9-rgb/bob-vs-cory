@@ -1,5 +1,6 @@
 import fightersJson from '../data/fighters.json';
 import {
+  AttackHeight,
   Box,
   FighterDefinition,
   FighterId,
@@ -70,6 +71,9 @@ export class Fighter {
   public juggleHitsTaken: number = 0;
   public lastFrameAdvantage: number = 0;
   public battleDamage: number = 0; // 0..1 visual bruising
+  /** Presentation only: height of the last hit taken and whether the fighter was crouching. */
+  public lastHitHeight: AttackHeight | null = null;
+  public lastHitCrouching: boolean = false;
 
   // Input buffer
   public readonly inputBuffer = new InputBuffer();

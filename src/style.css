@@ -728,3 +728,23 @@ html, body {
   .stage-carousel { grid-template-columns: repeat(2, 1fr); }
   .title-portrait { height: 48vh; opacity: 0.55; }
 }
+
+/* HUD columns must be able to shrink below their content on narrow screens. */
+.hud-top { grid-template-columns: minmax(0, 1fr) 94px minmax(0, 1fr); }
+.hud-fighter, .hud-name-row { min-width: 0; }
+
+/* Phone portrait: compact HUD, pause button out of the touch-control row. */
+@media (max-width: 600px) {
+  .hud-layer { padding: 10px 8px 12px; }
+  .hud-top { grid-template-columns: minmax(0, 1fr) 60px minmax(0, 1fr); gap: 6px; }
+  .hud-portrait { width: 34px; height: 34px; border-radius: 6px; }
+  .hud-name-row { gap: 5px; }
+  .hud-name { font-size: 0.62rem; letter-spacing: 0.03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .round-pips { gap: 3px; }
+  .round-pip { width: 10px; height: 10px; }
+  .health-bar-shell { height: 14px; }
+  .hud-timer { padding: 4px 2px; }
+  .timer-val { font-size: 1.3rem; }
+  .round-tag { font-size: 0.5rem; letter-spacing: 0.06em; }
+  #btn-pause-hud { position: fixed; top: 96px; left: 50%; transform: translateX(-50%); font-size: 0.62rem; padding: 4px 10px; z-index: 40; }
+}
