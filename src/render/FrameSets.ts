@@ -1,6 +1,7 @@
 import type { Fighter } from '../engine/Fighter';
 import type { FighterId } from '../types/game';
 import bobFrames from '../../public/assets/fighters/bob/frames.json';
+import attackFrames from '../data/attack-frames.json';
 
 /** Metadata written by tools/process-art.py for each processed v2 frame. */
 export interface FrameMeta {
@@ -19,6 +20,11 @@ export interface FrameMeta {
  */
 export const FRAME_SETS: Partial<Record<FighterId, Record<string, FrameMeta>>> = {
   bob: bobFrames as Record<string, FrameMeta>,
+};
+
+/** Per-move v2 attack frames: `startup` during startup frames, `active` during active + recovery. */
+export const ATTACK_FRAMES: Partial<Record<FighterId, Record<string, { startup: string; active: string }>>> = {
+  bob: (attackFrames as unknown as Record<string, Record<string, { startup: string; active: string }>>).bob,
 };
 
 export function frameUrl(id: FighterId, meta: FrameMeta): string {
@@ -41,7 +47,10 @@ function cycle(frames: string[], tick: number, ticksPerFrame: number, set: Recor
  * Picks the v2 frame for a fighter's current state, or null to use the v1 pose sprite.
  * Pure function of fighter state + render tick, so it never affects the simulation.
  */
-export function pickFrame(f: Pick<Fighter, 'id' | 'state' | 'vy'>, tick: number): string | null {
+export function pickFrame(
+  f: Pick<Fighter, 'id' | 'state' | 'vy'> & Partial<Pick<Fighter, 'currentMove' | 'moveFrame'>>,
+  tick: number
+): string | null {
   const set = FRAME_SETS[f.id];
   if (!set) return null;
   const has = (n: string) => (set[n] ? n : null);
@@ -64,6 +73,15 @@ export function pickFrame(f: Pick<Fighter, 'id' | 'state' | 'vy'>, tick: number)
       return has('crouch');
     case 'block_crouch':
       return has('crouch_block'); // rejected in batch 1 -> v1 block fallback
+    case 'attack': {
+      const move = f.currentMove;
+      const map = move ? ATTACK_FRAMES[f.id]?.[move.id] : undefined;
+      if (!move || !map) return null;
+      const inStartup = (f.moveFrame ?? 0) < move.startup;
+      const first = inStartup ? map.startup : map.active;
+      const second = inStartup ? map.active : map.startup;
+      return has(first) ?? has(second);
+    }
     case 'block_stand':
     case 'up_block':
     case 'flawless_block':

@@ -1,4 +1,26 @@
 {
+ "bk_01": {
+  "file": "bk_01.png",
+  "w": 1085,
+  "h": 2048,
+  "pivotX": 436.8,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "022_bob_bk_01.png",
+  "headOffset": -2.4
+ },
+ "bk_02": {
+  "file": "bk_02.png",
+  "w": 1901,
+  "h": 2048,
+  "pivotX": 362.5,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "023_bob_bk_02.png",
+  "headOffset": -302.5
+ },
  "block": {
   "file": "block.png",
   "w": 1407,
@@ -9,6 +31,28 @@
   "standH": 1802,
   "src": "015_bob_block.jpeg",
   "headOffset": 64.4
+ },
+ "bp_01": {
+  "file": "bp_01.png",
+  "w": 1438,
+  "h": 2048,
+  "pivotX": 720.4,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "018_bob_bp_01.png",
+  "headOffset": 0.9
+ },
+ "bp_02": {
+  "file": "bp_02.png",
+  "w": 1751,
+  "h": 2048,
+  "pivotX": 749.6,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "019_bob_bp_02.png",
+  "headOffset": 137.1
  },
  "crouch": {
   "file": "crouch.png",
@@ -31,6 +75,39 @@
   "standH": 1802,
   "src": "009_bob_dash.jpeg",
   "headOffset": 127.7
+ },
+ "fk_01": {
+  "file": "fk_01.png",
+  "w": 970,
+  "h": 2048,
+  "pivotX": 442.2,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "020_bob_fk_01.png",
+  "headOffset": -28.3
+ },
+ "fk_02": {
+  "file": "fk_02.png",
+  "w": 1749,
+  "h": 2048,
+  "pivotX": 352.4,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "021_bob_fk_02.png",
+  "headOffset": -266.3
+ },
+ "fp_02": {
+  "file": "fp_02.png",
+  "w": 1678,
+  "h": 2048,
+  "pivotX": 727.5,
+  "baselineY": 1966,
+  "figureH": 1802,
+  "standH": 1802,
+  "src": "017_bob_fp_02.png",
+  "headOffset": 13.6
  },
  "idle_01": {
   "file": "idle_01.png",
@@ -97,6 +174,17 @@
   "standH": 1802,
   "src": "010_bob_jump_takeoff.jpeg",
   "headOffset": 73.6
+ },
+ "sweep": {
+  "file": "sweep.png",
+  "w": 1615,
+  "h": 2048,
+  "pivotX": 523.2,
+  "baselineY": 1966,
+  "figureH": 1171,
+  "standH": 1802,
+  "src": "025_bob_sweep.png",
+  "headOffset": 30.4
  },
  "walk_02": {
   "file": "walk_02.png",

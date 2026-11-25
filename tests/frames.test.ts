@@ -25,7 +25,23 @@ describe('v2 frame sets', () => {
     expect(f('block_stand')).toBe('block');
     expect(f('block_crouch')).toBeNull(); // crouch_block rejected -> v1
     expect(f('attack')).toBeNull();
+    const mv = (id: string, startup = 8) => ({ id, startup }) as never;
+    const atk = (id: string, moveFrame: number) =>
+      pickFrame({ id: 'bob', state: 'attack', vy: 0, currentMove: mv(id), moveFrame }, 0);
+    expect(atk('n_1', 2)).toBe('fp_02'); // fp_01 rejected -> falls back to the extended jab
+    expect(atk('n_2', 2)).toBe('bp_01');
+    expect(atk('n_2', 9)).toBe('bp_02');
+    expect(atk('n_3', 1)).toBe('fk_01');
+    expect(atk('n_4', 12)).toBe('bk_02');
+    expect(atk('d_4', 3)).toBe('sweep');
+    expect(atk('palm_flurry', 3)).toBeNull(); // specials stay on v1
+    expect(atk('s_b23', 3)).toBeNull();
     expect(pickFrame({ id: 'cory', state: 'idle', vy: 0 }, 0)).toBeNull();
+  });
+  it('every attack-frame mapping points at real moves', async () => {
+    const { ATTACK_FRAMES } = await import('../src/render/FrameSets');
+    const fighters = (await import('../src/data/fighters.json')).default as unknown as Record<string, { moves: Record<string, unknown> }>;
+    for (const id of Object.keys(ATTACK_FRAMES.bob!)) expect(fighters.bob.moves[id], id).toBeTruthy();
   });
   it('idle cycle breathes through all three frames', () => {
     const seen = new Set<string>();

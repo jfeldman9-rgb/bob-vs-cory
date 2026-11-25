@@ -47,7 +47,7 @@
   ],
   [
    "^sweep$",
-   0.55
+   0.65
   ],
   [
    "^uppercut$",
@@ -81,5 +81,16 @@
    ".*",
    1.0
   ]
- ]
+ ],
+ "pivot": [
+  [
+   "^(fk|bk)_0[12]$",
+   "head_foot"
+  ],
+  [
+   ".*",
+   "torso"
+  ]
+ ],
+ "_pivot_doc": "How pivotX (the x that sits on the fighter's position) is measured. torso: alpha centroid of the 25-70% height band. head_foot: midpoint of the head and the planted foot, for kicks where the raised leg drags the torso centroid forward and the body would visibly jump back."
 }

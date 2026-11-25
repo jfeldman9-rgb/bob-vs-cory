@@ -1,0 +1,18 @@
+{
+  "_doc": "v2 painted attack frames per move id. 'startup' shows during startup frames, 'active' during active+recovery. Missing frames fall back to the other key, then to the v1 pose sprite. Moves not listed (specials, air attacks, crouch pokes, s_b23 low kick) stay on v1.",
+  "bob": {
+    "n_1": { "startup": "fp_01", "active": "fp_02" },
+    "s_11": { "startup": "fp_01", "active": "fp_02" },
+    "n_2": { "startup": "bp_01", "active": "bp_02" },
+    "s_12": { "startup": "bp_01", "active": "bp_02" },
+    "s_21": { "startup": "bp_01", "active": "bp_02" },
+    "b_2": { "startup": "bp_01", "active": "bp_02" },
+    "n_3": { "startup": "fk_01", "active": "fk_02" },
+    "n_4": { "startup": "bk_01", "active": "bk_02" },
+    "s_34": { "startup": "bk_01", "active": "bk_02" },
+    "s_124": { "startup": "bk_01", "active": "bk_02" },
+    "s_b234": { "startup": "bk_01", "active": "bk_02" },
+    "wakeup_kick": { "startup": "fk_01", "active": "fk_02" },
+    "d_4": { "startup": "sweep", "active": "sweep" }
+  }
+}

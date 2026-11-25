@@ -25,7 +25,9 @@ from scipy import ndimage as ndi
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPTS = os.path.join(ROOT, 'docs/v2/art-prompts.md')
 REJECTS = json.load(open(os.path.join(ROOT, 'tools/art-rejects.json')))
-RATIOS = json.load(open(os.path.join(ROOT, 'tools/art-pose-ratios.json')))['rules']
+_POSE = json.load(open(os.path.join(ROOT, 'tools/art-pose-ratios.json')))
+RATIOS = _POSE['rules']
+PIVOTS = _POSE.get('pivot', [['.*', 'torso']])
 CANVAS_H = 2048
 STAND_H = round(0.88 * CANVAS_H)       # 1802
 BASELINE = round(0.96 * CANVAS_H)      # 1966
@@ -94,9 +96,16 @@ def process(src, name, dst, force=False):
     canvas.alpha_composite(pm, (PAD, BASELINE - fig_h))
     a = np.asarray(canvas)[..., 3]
     # pivot = alpha-weighted centre of the torso/hips band (30%-75% down the figure)
-    band = a[BASELINE - int(fig_h * 0.70):BASELINE - int(fig_h * 0.25)].astype(np.float64)
-    cols = band.sum(0)
-    pivot_x = float((cols * np.arange(w)).sum() / max(cols.sum(), 1))
+    mode = next((m for pat, m in PIVOTS if re.search(pat, name)), 'torso')
+    if mode == 'head_foot':
+        top = BASELINE - fig_h
+        hy, hx = np.nonzero(a[top:top + int(fig_h * 0.07)] > 128)
+        fy, fx = np.nonzero(a[BASELINE - int(fig_h * 0.03):BASELINE + 1] > 128)
+        pivot_x = float((hx.mean() + fx.mean()) / 2)
+    else:
+        band = a[BASELINE - int(fig_h * 0.70):BASELINE - int(fig_h * 0.25)].astype(np.float64)
+        cols = band.sum(0)
+        pivot_x = float((cols * np.arange(w)).sum() / max(cols.sum(), 1))
     os.makedirs(os.path.dirname(dst), exist_ok=True)
     canvas.save(dst, optimize=True, compress_level=9)
     return {
