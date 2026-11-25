@@ -1,0 +1,529 @@
+{
+ "amb_colosseum_day": {
+  "files": [
+   "ambience/amb_colosseum_day.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 4.7
+ },
+ "amb_colosseum_night": {
+  "files": [
+   "ambience/amb_colosseum_night.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 4.1
+ },
+ "amb_lounge_day": {
+  "files": [
+   "ambience/amb_lounge_day.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 14.0
+ },
+ "amb_lounge_night": {
+  "files": [
+   "ambience/amb_lounge_night.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 4.5
+ },
+ "amb_penthouse_day": {
+  "files": [
+   "ambience/amb_penthouse_day.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 5.9
+ },
+ "amb_penthouse_night": {
+  "files": [
+   "ambience/amb_penthouse_night.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 4.5
+ },
+ "amb_subway_day": {
+  "files": [
+   "ambience/amb_subway_day.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 1.2
+ },
+ "amb_subway_night": {
+  "files": [
+   "ambience/amb_subway_night.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30,
+  "gainDb": 6.9
+ },
+ "block": {
+  "files": [
+   "sfx/block_1.wav",
+   "sfx/block_2.wav",
+   "sfx/block_3.wav",
+   "sfx/block_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "block_flawless": {
+  "files": [
+   "sfx/block_flawless_1.wav",
+   "sfx/block_flawless_2.wav",
+   "sfx/block_flawless_3.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.8
+ },
+ "block_parry": {
+  "files": [
+   "sfx/block_parry_1.wav",
+   "sfx/block_parry_2.wav",
+   "sfx/block_parry_3.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.9
+ },
+ "bob_bullet_time": {
+  "files": [
+   "sfx/bob_bullet_time_1.wav",
+   "sfx/bob_bullet_time_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.5
+ },
+ "bob_clone_summon": {
+  "files": [
+   "sfx/bob_clone_summon_1.wav",
+   "sfx/bob_clone_summon_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.2
+ },
+ "bob_earpiece": {
+  "files": [
+   "sfx/bob_earpiece_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.6
+ },
+ "bob_eggplant_spawn": {
+  "files": [
+   "sfx/bob_eggplant_spawn_1.wav",
+   "sfx/bob_eggplant_spawn_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.8
+ },
+ "bob_palm_flurry": {
+  "files": [
+   "sfx/bob_palm_flurry_1.wav",
+   "sfx/bob_palm_flurry_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "bob_shades_click": {
+  "files": [
+   "sfx/bob_shades_click_1.wav",
+   "sfx/bob_shades_click_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "bob_teleport": {
+  "files": [
+   "sfx/bob_teleport_1.wav",
+   "sfx/bob_teleport_2.wav",
+   "sfx/bob_teleport_3.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.8
+ },
+ "bodyfall": {
+  "files": [
+   "sfx/bodyfall_1.wav",
+   "sfx/bodyfall_2.wav",
+   "sfx/bodyfall_3.wav",
+   "sfx/bodyfall_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "cory_boa_whip": {
+  "files": [
+   "sfx/cory_boa_whip_1.wav",
+   "sfx/cory_boa_whip_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.6
+ },
+ "cory_camera_flash": {
+  "files": [
+   "sfx/cory_camera_flash_1.wav",
+   "sfx/cory_camera_flash_2.wav",
+   "sfx/cory_camera_flash_3.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.6
+ },
+ "cory_disco_ball": {
+  "files": [
+   "sfx/cory_disco_ball_1.wav",
+   "sfx/cory_disco_ball_2.wav",
+   "sfx/cory_disco_ball_3.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.5
+ },
+ "cory_feather": {
+  "files": [
+   "sfx/cory_feather_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.8
+ },
+ "cory_glitter_burst": {
+  "files": [
+   "sfx/cory_glitter_burst_1.wav",
+   "sfx/cory_glitter_burst_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "cory_glitter_throw": {
+  "files": [
+   "sfx/cory_glitter_throw_1.wav",
+   "sfx/cory_glitter_throw_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.8
+ },
+ "cory_runway_whoosh": {
+  "files": [
+   "sfx/cory_runway_whoosh_1.wav",
+   "sfx/cory_runway_whoosh_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.8
+ },
+ "fx_confetti_cannon": {
+  "files": [
+   "sfx/fx_confetti_cannon_1.wav",
+   "sfx/fx_confetti_cannon_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.5
+ },
+ "fx_crowd_cheer": {
+  "files": [
+   "sfx/fx_crowd_cheer_1.wav",
+   "sfx/fx_crowd_cheer_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 3.0
+ },
+ "fx_crowd_gasp": {
+  "files": [
+   "sfx/fx_crowd_gasp_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 2.0
+ },
+ "fx_giant_slam": {
+  "files": [
+   "sfx/fx_giant_slam_1.wav",
+   "sfx/fx_giant_slam_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 2.0
+ },
+ "fx_orbital_descent": {
+  "files": [
+   "sfx/fx_orbital_descent_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 3.0
+ },
+ "fx_slowmo_hit": {
+  "files": [
+   "sfx/fx_slowmo_hit_1.wav",
+   "sfx/fx_slowmo_hit_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 2.0
+ },
+ "hit_heavy_a": {
+  "files": [
+   "sfx/hit_heavy_a_1.wav",
+   "sfx/hit_heavy_a_2.wav",
+   "sfx/hit_heavy_a_3.wav",
+   "sfx/hit_heavy_a_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.9
+ },
+ "hit_heavy_b": {
+  "files": [
+   "sfx/hit_heavy_b_1.wav",
+   "sfx/hit_heavy_b_2.wav",
+   "sfx/hit_heavy_b_3.wav",
+   "sfx/hit_heavy_b_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "hit_light_a": {
+  "files": [
+   "sfx/hit_light_a_1.wav",
+   "sfx/hit_light_a_2.wav",
+   "sfx/hit_light_a_3.wav",
+   "sfx/hit_light_a_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.6
+ },
+ "hit_light_b": {
+  "files": [
+   "sfx/hit_light_b_1.wav",
+   "sfx/hit_light_b_2.wav",
+   "sfx/hit_light_b_3.wav",
+   "sfx/hit_light_b_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.6
+ },
+ "hit_special_eggplant": {
+  "files": [
+   "sfx/hit_special_eggplant_1.wav",
+   "sfx/hit_special_eggplant_2.wav",
+   "sfx/hit_special_eggplant_3.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "hit_special_glitch": {
+  "files": [
+   "sfx/hit_special_glitch_1.wav",
+   "sfx/hit_special_glitch_2.wav",
+   "sfx/hit_special_glitch_3.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "land": {
+  "files": [
+   "sfx/land_1.wav",
+   "sfx/land_2.wav",
+   "sfx/land_3.wav",
+   "sfx/land_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.6
+ },
+ "misc_combo_breaker": {
+  "files": [
+   "sfx/misc_combo_breaker_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.2
+ },
+ "misc_dizzy": {
+  "files": [
+   "sfx/misc_dizzy.wav"
+  ],
+  "loop": true,
+  "durationTarget": 2.0
+ },
+ "misc_meter_full": {
+  "files": [
+   "sfx/misc_meter_full_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "misc_round_bell": {
+  "files": [
+   "sfx/misc_round_bell_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.5
+ },
+ "misc_timer_tick": {
+  "files": [
+   "sfx/misc_timer_tick_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "step_flagstone": {
+  "files": [
+   "sfx/step_flagstone_1.wav",
+   "sfx/step_flagstone_2.wav",
+   "sfx/step_flagstone_3.wav",
+   "sfx/step_flagstone_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "step_glass": {
+  "files": [
+   "sfx/step_glass_1.wav",
+   "sfx/step_glass_2.wav",
+   "sfx/step_glass_3.wav",
+   "sfx/step_glass_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "step_sand": {
+  "files": [
+   "sfx/step_sand_1.wav",
+   "sfx/step_sand_2.wav",
+   "sfx/step_sand_3.wav",
+   "sfx/step_sand_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "step_tile": {
+  "files": [
+   "sfx/step_tile_1.wav",
+   "sfx/step_tile_2.wav",
+   "sfx/step_tile_3.wav",
+   "sfx/step_tile_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "sting_fatality_bob": {
+  "files": [
+   "stings/sting_fatality_bob.wav"
+  ],
+  "loop": false,
+  "durationTarget": 12
+ },
+ "sting_fatality_cory": {
+  "files": [
+   "stings/sting_fatality_cory.wav"
+  ],
+  "loop": false,
+  "durationTarget": 12
+ },
+ "sting_finish_drone": {
+  "files": [
+   "stings/sting_finish_drone.wav"
+  ],
+  "loop": true,
+  "durationTarget": 30
+ },
+ "sting_game_over": {
+  "files": [
+   "stings/sting_game_over.wav"
+  ],
+  "loop": false,
+  "durationTarget": 12
+ },
+ "sting_versus": {
+  "files": [
+   "stings/sting_versus.wav"
+  ],
+  "loop": false,
+  "durationTarget": 8
+ },
+ "sting_victory_bob": {
+  "files": [
+   "stings/sting_victory_bob.wav"
+  ],
+  "loop": false,
+  "durationTarget": 10
+ },
+ "sting_victory_cory": {
+  "files": [
+   "stings/sting_victory_cory.wav"
+  ],
+  "loop": false,
+  "durationTarget": 10
+ },
+ "ui_back": {
+  "files": [
+   "sfx/ui_back_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "ui_confirm": {
+  "files": [
+   "sfx/ui_confirm_1.wav",
+   "sfx/ui_confirm_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "ui_gong": {
+  "files": [
+   "sfx/ui_gong_1.wav"
+  ],
+  "loop": false,
+  "durationTarget": 3.0
+ },
+ "ui_hover": {
+  "files": [
+   "sfx/ui_hover_1.wav",
+   "sfx/ui_hover_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "ui_lockin": {
+  "files": [
+   "sfx/ui_lockin_1.wav",
+   "sfx/ui_lockin_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 1.0
+ },
+ "whoosh_heavy_a": {
+  "files": [
+   "sfx/whoosh_heavy_a_1.wav",
+   "sfx/whoosh_heavy_a_2.wav",
+   "sfx/whoosh_heavy_a_3.wav",
+   "sfx/whoosh_heavy_a_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.6
+ },
+ "whoosh_heavy_b": {
+  "files": [
+   "sfx/whoosh_heavy_b_1.wav",
+   "sfx/whoosh_heavy_b_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.7
+ },
+ "whoosh_light_a": {
+  "files": [
+   "sfx/whoosh_light_a_1.wav",
+   "sfx/whoosh_light_a_2.wav",
+   "sfx/whoosh_light_a_3.wav",
+   "sfx/whoosh_light_a_4.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ },
+ "whoosh_light_b": {
+  "files": [
+   "sfx/whoosh_light_b_1.wav",
+   "sfx/whoosh_light_b_2.wav"
+  ],
+  "loop": false,
+  "durationTarget": 0.5
+ }
+}

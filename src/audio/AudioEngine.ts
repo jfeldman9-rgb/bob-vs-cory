@@ -1,13 +1,23 @@
 import { GameSettings } from '../types/game';
 import { StageDefinition } from '../data/stages';
 import { VoiceBank, announcerClipForText } from './VoiceBank';
+import { SfxBank, ambienceIdForStage, type LoopHandle, type SfxPlayOptions } from './SfxBank';
+import type { FallbackKind, SfxOut } from './SfxDirector';
 
-export class AudioEngine {
+export class AudioEngine implements SfxOut {
   private ctx: AudioContext | null = null;
   private masterBus: GainNode | null = null;
   private musicBus: GainNode | null = null;
   private sfxBus: GainNode | null = null;
   private voiceBus: GainNode | null = null;
+  private stingBus: GainNode | null = null;
+  private ambienceBus: GainNode | null = null;
+
+  /** ElevenLabs SFX / ambience / stings; procedural sounds below are the fallback. */
+  public readonly sfx: SfxBank;
+  private loops = new Map<string, LoopHandle>();
+  private ambienceId: string | null = null;
+  private stingEndsAt = 0;
 
   private musicTimer: number | null = null;
   private musicStep = 0;
@@ -23,6 +33,11 @@ export class AudioEngine {
     this.voices = new VoiceBank(() =>
       this.ctx && this.voiceBus ? { ctx: this.ctx, bus: this.voiceBus } : null
     );
+    this.sfx = new SfxBank(() =>
+      this.ctx && this.sfxBus && this.stingBus && this.ambienceBus
+        ? { ctx: this.ctx, sfx: this.sfxBus, sting: this.stingBus, ambience: this.ambienceBus }
+        : null
+    );
   }
 
   public unlock(): void {
@@ -35,12 +50,18 @@ export class AudioEngine {
       this.musicBus = this.ctx.createGain();
       this.sfxBus = this.ctx.createGain();
       this.voiceBus = this.ctx.createGain();
+      this.stingBus = this.ctx.createGain();
+      this.ambienceBus = this.ctx.createGain();
 
+      this.stingBus.connect(this.masterBus);
+      this.ambienceBus.connect(this.masterBus);
       this.musicBus.connect(this.masterBus);
       this.sfxBus.connect(this.masterBus);
       this.voiceBus.connect(this.masterBus);
       this.masterBus.connect(this.ctx.destination);
       this.applySettings(this.settings);
+      // One-shots are ~9 MB of PCM in total: decode them all up front.
+      this.sfx.preload(SfxBank.oneShotIds());
     }
     if (this.ctx && this.ctx.state === 'suspended') {
       this.ctx.resume().catch(() => {});
@@ -55,6 +76,103 @@ export class AudioEngine {
     this.musicBus.gain.setTargetAtTime(settings.musicVolume * 0.45, now, 0.05);
     this.sfxBus.gain.setTargetAtTime(settings.sfxVolume, now, 0.03);
     this.voiceBus.gain.setTargetAtTime(settings.voiceVolume, now, 0.03);
+    if (this.stingBus) this.stingBus.gain.setTargetAtTime(settings.musicVolume * 0.85, now, 0.05);
+    if (this.ambienceBus) this.ambienceBus.gain.setTargetAtTime(settings.sfxVolume * 0.55, now, 0.05);
+  }
+
+  // === SAMPLE SFX (SfxOut) ===
+  public play(id: string, opts?: SfxPlayOptions): boolean {
+    this.unlock();
+    return this.sfx.play(id, opts);
+  }
+
+  public fallback(kind: FallbackKind): void {
+    switch (kind) {
+      case 'hit': this.playHit(false); break;
+      case 'hit_heavy': this.playHit(true); break;
+      case 'block': this.playBlock(false); break;
+      case 'flawless': this.playBlock(true); break;
+      case 'parry': this.playParry(); break;
+      case 'teleport': this.playTeleport(); break;
+      case 'glitter': this.playGlitterChime(); break;
+      case 'splat': this.playEggplantSplat(); break;
+      case 'gong': this.playGong(); break;
+    }
+  }
+
+  public startLoop(key: string, id: string): void {
+    if (this.loops.has(key)) return;
+    const h = this.sfx.startLoop(id, { bus: 'sfx', gainDb: -6, fadeSec: 0.2 });
+    if (h) this.loops.set(key, h);
+  }
+
+  public stopLoop(key: string, fadeSec = 0.4): void {
+    const h = this.loops.get(key);
+    if (h) {
+      h.stop(fadeSec);
+      this.loops.delete(key);
+    }
+  }
+
+  /** Music sting, queued after any sting still playing. Stings are not stage music. */
+  public sting(id: string, opts: { delayMs?: number; stopMusic?: boolean } = {}): void {
+    this.unlock();
+    if (!this.ctx) return;
+    const buf = this.sfx.isReady(id);
+    if (!buf) {
+      // Not decoded yet: load and try once more when it arrives (if still soon).
+      const asked = this.ctx.currentTime;
+      void this.sfx.ensure([id]).then(() => {
+        if (this.ctx && this.ctx.currentTime - asked < 1.5 && this.sfx.isReady(id)) this.sting(id, opts);
+      });
+      return;
+    }
+    if (opts.stopMusic) {
+      this.stopMusic();
+      this.stopLoop('drone', 0.8);
+    }
+    const now = this.ctx.currentTime;
+    const startAt = Math.max(now + (opts.delayMs ?? 0) / 1000, this.stingEndsAt);
+    const dur = this.sfx.duration(id);
+    this.sfx.play(id, { bus: 'sting', exact: true, delayMs: (startAt - now) * 1000 });
+    this.stingEndsAt = startAt + dur;
+  }
+
+  /** Decode the stings + ambience a match needs before it starts. */
+  public async preloadMatchAudio(stage: string, fighters: string[]): Promise<void> {
+    this.unlock();
+    const ids = ['sting_versus', 'sting_finish_drone', 'sting_game_over', 'ui_gong', 'misc_round_bell'];
+    for (const f of fighters) ids.push(`sting_fatality_${f}`, `sting_victory_${f}`);
+    const amb = ambienceIdForStage(stage);
+    if (amb) ids.push(amb);
+    await this.sfx.ensure(ids);
+  }
+
+  /** Per-stage ambience bed (null stops it). */
+  public setAmbience(stage: string | null): void {
+    const id = stage ? ambienceIdForStage(stage) : null;
+    if (id === this.ambienceId && this.loops.has('ambience')) return;
+    this.stopLoop('ambience', 1.0);
+    this.ambienceId = id;
+    if (!id) return;
+    const h = this.sfx.startLoop(id, { bus: 'ambience', fadeSec: 1.5 });
+    if (h) this.loops.set('ambience', h);
+    else void this.sfx.ensure([id]).then(() => {
+      if (this.ambienceId === id && !this.loops.has('ambience')) this.setAmbience(stage);
+    });
+  }
+
+  /** Stop ambience, drone, dizzy loops (leaving a match). */
+  public stopMatchAudio(): void {
+    for (const k of Array.from(this.loops.keys())) this.stopLoop(k, 0.4);
+    this.ambienceId = null;
+    this.stingEndsAt = 0;
+  }
+
+  public playUI(kind: 'hover' | 'confirm' | 'back' | 'lockin'): void {
+    this.unlock();
+    const id = kind === 'hover' ? 'ui_hover' : kind === 'back' ? 'ui_back' : kind === 'lockin' ? 'ui_lockin' : 'ui_confirm';
+    if (!this.sfx.play(id, { exact: kind !== 'hover', gainDb: kind === 'hover' ? -8 : -3 }) && kind !== 'hover') this.playUIClickTone();
   }
 
   public setMusic(style: StageDefinition['musicStyle'] | 'menu' | 'finish_him', intense: boolean = false): void {
@@ -62,8 +180,20 @@ export class AudioEngine {
     this.currentStyle = style;
     this.intenseMode = intense;
     this.stopMusic();
+    if (style !== 'finish_him') this.stopLoop('drone', 0.6);
 
     if (typeof window === 'undefined') return;
+    if (style === 'finish_him') {
+      // Recorded Finish Him drone (ElevenLabs loop); procedural drone only as fallback.
+      if (!this.loops.has('drone')) {
+        const h = this.sfx.startLoop('sting_finish_drone', { bus: 'sting', fadeSec: 0.8, gainDb: -2 });
+        if (h) this.loops.set('drone', h);
+      }
+      if (this.loops.has('drone')) {
+        this.musicTimer = window.setInterval(() => {}, 1000); // marks music as active
+        return;
+      }
+    }
     const tempoMs =
       style === 'finish_him'
         ? 380
@@ -290,13 +420,17 @@ export class AudioEngine {
   public playGong(): void {
     this.unlock();
     if (!this.ctx || !this.sfxBus) return;
+    if (this.sfx.play('ui_gong', { exact: true, gainDb: -4 })) return;
     this.playTone(110, 0.85, 'sawtooth', 0.28, this.sfxBus, 600);
     this.playTone(165, 0.75, 'triangle', 0.22, this.sfxBus, 900);
     this.playNoiseBurst(0.2, 0.18, this.sfxBus, 1200);
   }
 
   public playUIClick(): void {
-    this.unlock();
+    this.playUI('confirm');
+  }
+
+  private playUIClickTone(): void {
     if (!this.ctx || !this.sfxBus) return;
     this.playTone(540, 0.05, 'triangle', 0.15, this.sfxBus, 1800);
   }

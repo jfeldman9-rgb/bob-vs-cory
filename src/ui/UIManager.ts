@@ -38,6 +38,8 @@ export interface UICallbacks {
   onSettingsChanged: (settings: GameSettings) => void;
   onPauseToggle: (paused: boolean) => void;
   onClickSound: () => void;
+  /** Sample UI sounds (ElevenLabs); onClickSound stays as the generic fallback. */
+  onUISound?: (kind: UISoundKind) => void;
   /** Play a recorded voice clip by id (announcer menu calls, select lines). */
   onVoice?: (clipId: string, delayMs?: number) => void;
   /** The exact victory quote shown on the result card, so it can be voiced. */
@@ -861,15 +863,33 @@ export class UIManager {
     });
   }
 
+  private lastHoverAt = 0;
+
   private bindButtons(handlers: Record<string, () => void>): void {
     this.root.querySelectorAll<HTMLElement>('[data-action]').forEach((el) => {
       const action = el.dataset.action;
       if (action && handlers[action]) {
         el.addEventListener('click', () => {
-          this.callbacks.onClickSound();
+          if (this.callbacks.onUISound) this.callbacks.onUISound(uiSoundForAction(action));
+          else this.callbacks.onClickSound();
           handlers[action]();
+        });
+        el.addEventListener('mouseenter', () => {
+          const now = performance.now();
+          if (now - this.lastHoverAt < 70) return;
+          this.lastHoverAt = now;
+          this.callbacks.onUISound?.('hover');
         });
       }
     });
   }
+}
+
+export type UISoundKind = 'hover' | 'confirm' | 'back' | 'lockin';
+
+/** Which UI sample a menu action plays (PLAN.md §7 UI set). */
+export function uiSoundForAction(action: string): UISoundKind {
+  if (/^(back-|close-|resume$|vic-title$|vic-select$|title-pause$|select-pause$)/.test(action)) return 'back';
+  if (/^p[12]-(bob|cory)$/.test(action) || action === 'start-fight') return 'lockin';
+  return 'confirm';
 }

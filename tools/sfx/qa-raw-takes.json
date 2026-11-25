@@ -1,0 +1,1405 @@
+{
+ "amb_colosseum_day__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -21.3,
+  "rms_db": -38.7,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "amb_colosseum_night__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -21.5,
+  "rms_db": -38.1,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "amb_lounge_day__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -25.3,
+  "rms_db": -48.3,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.002,
+  "bad": [
+   "quiet"
+  ]
+ },
+ "amb_lounge_night__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -18.1,
+  "rms_db": -38.5,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "amb_penthouse_day__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -25.5,
+  "rms_db": -39.9,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "amb_penthouse_night__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -12.8,
+  "rms_db": -38.5,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "amb_subway_day__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -15.5,
+  "rms_db": -35.2,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "amb_subway_night__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -27.2,
+  "rms_db": -40.9,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "block__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.6,
+  "rms_db": -19.2,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.011,
+  "bad": []
+ },
+ "block__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.4,
+  "rms_db": -22.5,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.006,
+  "bad": []
+ },
+ "block__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.4,
+  "rms_db": -25.1,
+  "clip": 0,
+  "silent": 0.22,
+  "lead": 0.004,
+  "bad": []
+ },
+ "block__4.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.2,
+  "rms_db": -22.5,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.014,
+  "bad": []
+ },
+ "block_flawless__1.mp3": {
+  "dur": 0.8,
+  "peak_db": -2.1,
+  "rms_db": -21.1,
+  "clip": 0,
+  "silent": 0.06,
+  "lead": 0.0,
+  "bad": []
+ },
+ "block_flawless__2.mp3": {
+  "dur": 0.8,
+  "peak_db": -2.1,
+  "rms_db": -24.1,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.0,
+  "bad": []
+ },
+ "block_flawless__3.mp3": {
+  "dur": 0.8,
+  "peak_db": -10.8,
+  "rms_db": -30.1,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.0,
+  "bad": []
+ },
+ "block_parry__1.mp3": {
+  "dur": 0.88,
+  "peak_db": -8.0,
+  "rms_db": -32.6,
+  "clip": 0,
+  "silent": 0.41,
+  "lead": 0.111,
+  "bad": []
+ },
+ "block_parry__2.mp3": {
+  "dur": 0.88,
+  "peak_db": -2.3,
+  "rms_db": -26.2,
+  "clip": 0,
+  "silent": 0.53,
+  "lead": 0.108,
+  "bad": [
+   "silent"
+  ]
+ },
+ "block_parry__3.mp3": {
+  "dur": 0.88,
+  "peak_db": -0.6,
+  "rms_db": -23.0,
+  "clip": 0,
+  "silent": 0.35,
+  "lead": 0.067,
+  "bad": []
+ },
+ "bob_bullet_time__1.mp3": {
+  "dur": 1.48,
+  "peak_db": -1.2,
+  "rms_db": -13.6,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_bullet_time__2.mp3": {
+  "dur": 1.48,
+  "peak_db": -4.5,
+  "rms_db": -16.0,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_clone_summon__1.mp3": {
+  "dur": 1.2,
+  "peak_db": -16.3,
+  "rms_db": -35.2,
+  "clip": 0,
+  "silent": 0.33,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_clone_summon__2.mp3": {
+  "dur": 1.2,
+  "peak_db": -11.8,
+  "rms_db": -32.8,
+  "clip": 0,
+  "silent": 0.38,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_earpiece__1.mp3": {
+  "dur": 0.6,
+  "peak_db": -8.1,
+  "rms_db": -22.1,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_eggplant_spawn__1.mp3": {
+  "dur": 0.8,
+  "peak_db": -11.6,
+  "rms_db": -24.6,
+  "clip": 0,
+  "silent": 0.44,
+  "lead": 0.008,
+  "bad": []
+ },
+ "bob_eggplant_spawn__2.mp3": {
+  "dur": 0.8,
+  "peak_db": -2.2,
+  "rms_db": -21.8,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_palm_flurry__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -5.4,
+  "rms_db": -35.0,
+  "clip": 0,
+  "silent": 0.5,
+  "lead": 0.077,
+  "bad": []
+ },
+ "bob_palm_flurry__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -10.9,
+  "rms_db": -38.7,
+  "clip": 0,
+  "silent": 0.55,
+  "lead": 0.071,
+  "bad": [
+   "silent"
+  ]
+ },
+ "bob_shades_click__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -0.6,
+  "rms_db": -28.0,
+  "clip": 0,
+  "silent": 0.56,
+  "lead": 0.002,
+  "bad": [
+   "silent"
+  ]
+ },
+ "bob_shades_click__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -8.8,
+  "rms_db": -40.9,
+  "clip": 0,
+  "silent": 0.56,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "bob_teleport__1.mp3": {
+  "dur": 0.8,
+  "peak_db": -0.4,
+  "rms_db": -19.6,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_teleport__2.mp3": {
+  "dur": 0.8,
+  "peak_db": -3.2,
+  "rms_db": -17.7,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bob_teleport__3.mp3": {
+  "dur": 0.8,
+  "peak_db": -1.0,
+  "rms_db": -17.5,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bodyfall__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.3,
+  "rms_db": -26.4,
+  "clip": 0,
+  "silent": 0.7,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "bodyfall__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.5,
+  "rms_db": -19.4,
+  "clip": 0,
+  "silent": 0.45,
+  "lead": 0.0,
+  "bad": []
+ },
+ "bodyfall__3.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.5,
+  "rms_db": -22.7,
+  "clip": 0,
+  "silent": 0.6,
+  "lead": 0.266,
+  "bad": [
+   "silent",
+   "lead"
+  ]
+ },
+ "bodyfall__4.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.7,
+  "rms_db": -23.8,
+  "clip": 0,
+  "silent": 0.55,
+  "lead": 0.204,
+  "bad": [
+   "silent",
+   "lead"
+  ]
+ },
+ "cory_boa_whip__1.mp3": {
+  "dur": 0.6,
+  "peak_db": -6.9,
+  "rms_db": -29.4,
+  "clip": 0,
+  "silent": 0.42,
+  "lead": 0.0,
+  "bad": []
+ },
+ "cory_boa_whip__2.mp3": {
+  "dur": 0.6,
+  "peak_db": -8.9,
+  "rms_db": -33.5,
+  "clip": 0,
+  "silent": 0.33,
+  "lead": 0.0,
+  "bad": []
+ },
+ "cory_camera_flash__1.mp3": {
+  "dur": 0.6,
+  "peak_db": -0.0,
+  "rms_db": -22.2,
+  "clip": 0,
+  "silent": 0.42,
+  "lead": 0.095,
+  "bad": []
+ },
+ "cory_camera_flash__2.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.3,
+  "rms_db": -24.3,
+  "clip": 0,
+  "silent": 0.5,
+  "lead": 0.0,
+  "bad": []
+ },
+ "cory_camera_flash__3.mp3": {
+  "dur": 0.6,
+  "peak_db": -0.9,
+  "rms_db": -24.7,
+  "clip": 0,
+  "silent": 0.17,
+  "lead": 0.065,
+  "bad": []
+ },
+ "cory_disco_ball__1.mp3": {
+  "dur": 1.48,
+  "peak_db": 0.1,
+  "rms_db": -27.6,
+  "clip": 1,
+  "silent": 0.41,
+  "lead": 0.0,
+  "bad": []
+ },
+ "cory_disco_ball__2.mp3": {
+  "dur": 1.48,
+  "peak_db": -0.5,
+  "rms_db": -24.5,
+  "clip": 0,
+  "silent": 0.14,
+  "lead": 0.0,
+  "bad": []
+ },
+ "cory_disco_ball__3.mp3": {
+  "dur": 1.48,
+  "peak_db": -3.2,
+  "rms_db": -27.0,
+  "clip": 0,
+  "silent": 0.28,
+  "lead": 0.072,
+  "bad": []
+ },
+ "cory_feather__1.mp3": {
+  "dur": 0.8,
+  "peak_db": -23.5,
+  "rms_db": -42.5,
+  "clip": 0,
+  "silent": 0.06,
+  "lead": 0.016,
+  "bad": []
+ },
+ "cory_glitter_burst__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -5.4,
+  "rms_db": -23.7,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "cory_glitter_burst__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -15.7,
+  "rms_db": -35.1,
+  "clip": 0,
+  "silent": 0.3,
+  "lead": 0.0,
+  "bad": []
+ },
+ "cory_glitter_throw__1.mp3": {
+  "dur": 0.8,
+  "peak_db": -12.4,
+  "rms_db": -32.1,
+  "clip": 0,
+  "silent": 0.31,
+  "lead": 0.052,
+  "bad": []
+ },
+ "cory_glitter_throw__2.mp3": {
+  "dur": 0.8,
+  "peak_db": -14.1,
+  "rms_db": -31.2,
+  "clip": 0,
+  "silent": 0.19,
+  "lead": 0.023,
+  "bad": []
+ },
+ "cory_runway_whoosh__1.mp3": {
+  "dur": 0.8,
+  "peak_db": -23.7,
+  "rms_db": -46.8,
+  "clip": 0,
+  "silent": 0.56,
+  "lead": 0.0,
+  "bad": [
+   "quiet",
+   "silent"
+  ]
+ },
+ "cory_runway_whoosh__2.mp3": {
+  "dur": 0.8,
+  "peak_db": -9.3,
+  "rms_db": -34.9,
+  "clip": 0,
+  "silent": 0.44,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_confetti_cannon__1.mp3": {
+  "dur": 1.48,
+  "peak_db": -10.1,
+  "rms_db": -32.4,
+  "clip": 0,
+  "silent": 0.17,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_confetti_cannon__2.mp3": {
+  "dur": 1.48,
+  "peak_db": -6.5,
+  "rms_db": -26.6,
+  "clip": 0,
+  "silent": 0.14,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_confetti_cannon__3.mp3": {
+  "dur": 1.48,
+  "peak_db": -1.1,
+  "rms_db": -27.5,
+  "clip": 0,
+  "silent": 0.14,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_confetti_cannon__4.mp3": {
+  "dur": 1.48,
+  "peak_db": -7.8,
+  "rms_db": -31.0,
+  "clip": 0,
+  "silent": 0.14,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_crowd_cheer__1.mp3": {
+  "dur": 3.0,
+  "peak_db": -16.7,
+  "rms_db": -33.7,
+  "clip": 0,
+  "silent": 0.02,
+  "lead": 0.03,
+  "bad": []
+ },
+ "fx_crowd_cheer__2.mp3": {
+  "dur": 3.0,
+  "peak_db": -17.2,
+  "rms_db": -33.5,
+  "clip": 0,
+  "silent": 0.02,
+  "lead": 0.019,
+  "bad": []
+ },
+ "fx_crowd_gasp__1.mp3": {
+  "dur": 2.0,
+  "peak_db": -9.1,
+  "rms_db": -25.9,
+  "clip": 0,
+  "silent": 0.07,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_giant_slam__1.mp3": {
+  "dur": 2.0,
+  "peak_db": -1.9,
+  "rms_db": -16.7,
+  "clip": 0,
+  "silent": 0.05,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_giant_slam__2.mp3": {
+  "dur": 2.0,
+  "peak_db": -1.6,
+  "rms_db": -17.8,
+  "clip": 0,
+  "silent": 0.05,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_orbital_descent__1.mp3": {
+  "dur": 3.0,
+  "peak_db": -1.5,
+  "rms_db": -19.3,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "fx_slowmo_hit__1.mp3": {
+  "dur": 2.0,
+  "peak_db": -1.6,
+  "rms_db": -15.4,
+  "clip": 0,
+  "silent": 0.07,
+  "lead": 0.047,
+  "bad": []
+ },
+ "fx_slowmo_hit__2.mp3": {
+  "dur": 2.0,
+  "peak_db": -1.4,
+  "rms_db": -17.6,
+  "clip": 0,
+  "silent": 0.05,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_heavy_a__1.mp3": {
+  "dur": 0.88,
+  "peak_db": -1.0,
+  "rms_db": -19.6,
+  "clip": 0,
+  "silent": 0.47,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_heavy_a__2.mp3": {
+  "dur": 0.88,
+  "peak_db": -0.6,
+  "rms_db": -25.7,
+  "clip": 0,
+  "silent": 0.47,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_heavy_a__3.mp3": {
+  "dur": 0.88,
+  "peak_db": -1.8,
+  "rms_db": -22.2,
+  "clip": 0,
+  "silent": 0.35,
+  "lead": 0.038,
+  "bad": []
+ },
+ "hit_heavy_a__4.mp3": {
+  "dur": 0.88,
+  "peak_db": -1.5,
+  "rms_db": -24.6,
+  "clip": 0,
+  "silent": 0.35,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_heavy_b__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -7.4,
+  "rms_db": -21.4,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_heavy_b__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.7,
+  "rms_db": -19.3,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.006,
+  "bad": []
+ },
+ "hit_heavy_b__3.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.3,
+  "rms_db": -19.3,
+  "clip": 0,
+  "silent": 0.2,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_heavy_b__4.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.6,
+  "rms_db": -17.9,
+  "clip": 0,
+  "silent": 0.2,
+  "lead": 0.051,
+  "bad": []
+ },
+ "hit_light_a__1.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.1,
+  "rms_db": -29.8,
+  "clip": 0,
+  "silent": 0.08,
+  "lead": 0.158,
+  "bad": [
+   "lead"
+  ]
+ },
+ "hit_light_a__2.mp3": {
+  "dur": 0.6,
+  "peak_db": -2.4,
+  "rms_db": -27.4,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_light_a__3.mp3": {
+  "dur": 0.6,
+  "peak_db": -2.8,
+  "rms_db": -28.2,
+  "clip": 0,
+  "silent": 0.17,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_light_a__4.mp3": {
+  "dur": 0.6,
+  "peak_db": -4.7,
+  "rms_db": -30.0,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.018,
+  "bad": []
+ },
+ "hit_light_b__1.mp3": {
+  "dur": 0.6,
+  "peak_db": -11.6,
+  "rms_db": -27.7,
+  "clip": 0,
+  "silent": 0.58,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "hit_light_b__2.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.7,
+  "rms_db": -19.8,
+  "clip": 0,
+  "silent": 0.42,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_light_b__3.mp3": {
+  "dur": 0.6,
+  "peak_db": -19.8,
+  "rms_db": -42.1,
+  "clip": 0,
+  "silent": 0.58,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "hit_light_b__4.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.7,
+  "rms_db": -22.1,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_special_eggplant__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -2.9,
+  "rms_db": -24.3,
+  "clip": 0,
+  "silent": 0.65,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "hit_special_eggplant__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -2.4,
+  "rms_db": -24.3,
+  "clip": 0,
+  "silent": 0.3,
+  "lead": 0.008,
+  "bad": []
+ },
+ "hit_special_eggplant__3.mp3": {
+  "dur": 1.0,
+  "peak_db": -14.1,
+  "rms_db": -35.0,
+  "clip": 0,
+  "silent": 0.6,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "hit_special_glitch__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.4,
+  "rms_db": -21.5,
+  "clip": 0,
+  "silent": 0.05,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_special_glitch__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -0.4,
+  "rms_db": -15.5,
+  "clip": 0,
+  "silent": 0.05,
+  "lead": 0.0,
+  "bad": []
+ },
+ "hit_special_glitch__3.mp3": {
+  "dur": 1.0,
+  "peak_db": -1.7,
+  "rms_db": -16.2,
+  "clip": 0,
+  "silent": 0.1,
+  "lead": 0.0,
+  "bad": []
+ },
+ "land__1.mp3": {
+  "dur": 0.6,
+  "peak_db": -18.7,
+  "rms_db": -35.9,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.0,
+  "bad": []
+ },
+ "land__2.mp3": {
+  "dur": 0.6,
+  "peak_db": -8.7,
+  "rms_db": -30.3,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.0,
+  "bad": []
+ },
+ "land__3.mp3": {
+  "dur": 0.6,
+  "peak_db": -4.9,
+  "rms_db": -29.7,
+  "clip": 0,
+  "silent": 0.33,
+  "lead": 0.0,
+  "bad": []
+ },
+ "land__4.mp3": {
+  "dur": 0.6,
+  "peak_db": -2.0,
+  "rms_db": -24.0,
+  "clip": 0,
+  "silent": 0.08,
+  "lead": 0.116,
+  "bad": []
+ },
+ "misc_combo_breaker__1.mp3": {
+  "dur": 1.2,
+  "peak_db": -8.8,
+  "rms_db": -29.9,
+  "clip": 0,
+  "silent": 0.29,
+  "lead": 0.0,
+  "bad": []
+ },
+ "misc_dizzy__1.mp3": {
+  "dur": 2.0,
+  "peak_db": -9.9,
+  "rms_db": -25.9,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "misc_meter_full__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -6.6,
+  "rms_db": -26.0,
+  "clip": 0,
+  "silent": 0.4,
+  "lead": 0.0,
+  "bad": []
+ },
+ "misc_meter_full__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -5.6,
+  "rms_db": -26.7,
+  "clip": 0,
+  "silent": 0.35,
+  "lead": 0.0,
+  "bad": []
+ },
+ "misc_meter_full__3.mp3": {
+  "dur": 1.0,
+  "peak_db": -2.9,
+  "rms_db": -22.1,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.0,
+  "bad": []
+ },
+ "misc_round_bell__1.mp3": {
+  "dur": 1.48,
+  "peak_db": -7.5,
+  "rms_db": -28.5,
+  "clip": 0,
+  "silent": 0.07,
+  "lead": 0.0,
+  "bad": []
+ },
+ "misc_timer_tick__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -117.9,
+  "rms_db": -138.2,
+  "clip": 0,
+  "silent": 1.0,
+  "lead": 0.48,
+  "bad": [
+   "quiet",
+   "silent",
+   "lead"
+  ]
+ },
+ "misc_timer_tick__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -65.5,
+  "rms_db": -84.3,
+  "clip": 0,
+  "silent": 1.0,
+  "lead": 0.48,
+  "bad": [
+   "quiet",
+   "silent",
+   "lead"
+  ]
+ },
+ "misc_timer_tick__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -2.7,
+  "rms_db": -29.0,
+  "clip": 0,
+  "silent": 0.89,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "step_flagstone__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -7.5,
+  "rms_db": -27.3,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_flagstone__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -4.4,
+  "rms_db": -26.9,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_flagstone__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -5.8,
+  "rms_db": -28.0,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_flagstone__4.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.7,
+  "rms_db": -24.5,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_glass__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -20.3,
+  "rms_db": -43.2,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_glass__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -20.2,
+  "rms_db": -44.3,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_glass__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -16.2,
+  "rms_db": -43.1,
+  "clip": 0,
+  "silent": 0.22,
+  "lead": 0.011,
+  "bad": []
+ },
+ "step_glass__4.mp3": {
+  "dur": 0.48,
+  "peak_db": -15.5,
+  "rms_db": -39.5,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_sand__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -25.9,
+  "rms_db": -42.4,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.017,
+  "bad": []
+ },
+ "step_sand__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -7.2,
+  "rms_db": -29.6,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_sand__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -13.5,
+  "rms_db": -37.0,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_sand__4.mp3": {
+  "dur": 0.48,
+  "peak_db": -9.2,
+  "rms_db": -29.6,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "step_tile__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.5,
+  "rms_db": -29.3,
+  "clip": 0,
+  "silent": 0.33,
+  "lead": 0.024,
+  "bad": []
+ },
+ "step_tile__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -5.4,
+  "rms_db": -28.5,
+  "clip": 0,
+  "silent": 0.22,
+  "lead": 0.01,
+  "bad": []
+ },
+ "step_tile__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.9,
+  "rms_db": -29.3,
+  "clip": 0,
+  "silent": 0.33,
+  "lead": 0.029,
+  "bad": []
+ },
+ "step_tile__4.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.5,
+  "rms_db": -29.3,
+  "clip": 0,
+  "silent": 0.22,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_fatality_bob__1.mp3": {
+  "dur": 12.0,
+  "peak_db": -1.3,
+  "rms_db": -19.0,
+  "clip": 0,
+  "silent": 0.17,
+  "lead": 0.005,
+  "bad": []
+ },
+ "sting_fatality_bob__2.mp3": {
+  "dur": 12.0,
+  "peak_db": -1.2,
+  "rms_db": -20.3,
+  "clip": 0,
+  "silent": 0.15,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_fatality_cory__1.mp3": {
+  "dur": 12.0,
+  "peak_db": -3.4,
+  "rms_db": -21.9,
+  "clip": 0,
+  "silent": 0.28,
+  "lead": 0.025,
+  "bad": []
+ },
+ "sting_fatality_cory__2.mp3": {
+  "dur": 12.0,
+  "peak_db": -2.4,
+  "rms_db": -21.8,
+  "clip": 0,
+  "silent": 0.28,
+  "lead": 0.034,
+  "bad": []
+ },
+ "sting_finish_drone__1.mp3": {
+  "dur": 30.0,
+  "peak_db": -9.8,
+  "rms_db": -26.0,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_finish_drone__2.mp3": {
+  "dur": 30.0,
+  "peak_db": -8.8,
+  "rms_db": -26.3,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_game_over__1.mp3": {
+  "dur": 12.0,
+  "peak_db": -6.2,
+  "rms_db": -20.4,
+  "clip": 0,
+  "silent": 0.09,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_game_over__2.mp3": {
+  "dur": 12.0,
+  "peak_db": -2.8,
+  "rms_db": -18.4,
+  "clip": 0,
+  "silent": 0.29,
+  "lead": 0.016,
+  "bad": []
+ },
+ "sting_versus__1.mp3": {
+  "dur": 8.0,
+  "peak_db": -1.3,
+  "rms_db": -17.4,
+  "clip": 0,
+  "silent": 0.16,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_versus__2.mp3": {
+  "dur": 8.0,
+  "peak_db": -0.6,
+  "rms_db": -18.8,
+  "clip": 0,
+  "silent": 0.08,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_victory_bob__1.mp3": {
+  "dur": 10.0,
+  "peak_db": -2.7,
+  "rms_db": -17.3,
+  "clip": 0,
+  "silent": 0.14,
+  "lead": 0.028,
+  "bad": []
+ },
+ "sting_victory_bob__2.mp3": {
+  "dur": 10.0,
+  "peak_db": -4.2,
+  "rms_db": -20.3,
+  "clip": 0,
+  "silent": 0.24,
+  "lead": 0.017,
+  "bad": []
+ },
+ "sting_victory_cory__1.mp3": {
+  "dur": 10.0,
+  "peak_db": -2.4,
+  "rms_db": -24.4,
+  "clip": 0,
+  "silent": 0.28,
+  "lead": 0.0,
+  "bad": []
+ },
+ "sting_victory_cory__2.mp3": {
+  "dur": 10.0,
+  "peak_db": -4.6,
+  "rms_db": -22.6,
+  "clip": 0,
+  "silent": 0.2,
+  "lead": 0.0,
+  "bad": []
+ },
+ "ui_back__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -4.9,
+  "rms_db": -24.9,
+  "clip": 0,
+  "silent": 0.33,
+  "lead": 0.0,
+  "bad": []
+ },
+ "ui_confirm__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.6,
+  "rms_db": -18.4,
+  "clip": 0,
+  "silent": 0.22,
+  "lead": 0.0,
+  "bad": []
+ },
+ "ui_confirm__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -0.8,
+  "rms_db": -19.4,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.0,
+  "bad": []
+ },
+ "ui_gong__1.mp3": {
+  "dur": 3.0,
+  "peak_db": -7.0,
+  "rms_db": -30.5,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "ui_hover__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -116.1,
+  "rms_db": -135.2,
+  "clip": 0,
+  "silent": 1.0,
+  "lead": 0.48,
+  "bad": [
+   "quiet",
+   "silent",
+   "lead"
+  ]
+ },
+ "ui_hover__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -16.7,
+  "rms_db": -42.9,
+  "clip": 0,
+  "silent": 0.89,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "ui_hover__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -48.1,
+  "rms_db": -72.4,
+  "clip": 0,
+  "silent": 1.0,
+  "lead": 0.48,
+  "bad": [
+   "quiet",
+   "silent",
+   "lead"
+  ]
+ },
+ "ui_hover__4.mp3": {
+  "dur": 0.48,
+  "peak_db": -8.3,
+  "rms_db": -29.1,
+  "clip": 0,
+  "silent": 0.78,
+  "lead": 0.0,
+  "bad": [
+   "silent"
+  ]
+ },
+ "ui_lockin__1.mp3": {
+  "dur": 1.0,
+  "peak_db": -4.7,
+  "rms_db": -20.0,
+  "clip": 0,
+  "silent": 0.25,
+  "lead": 0.006,
+  "bad": []
+ },
+ "ui_lockin__2.mp3": {
+  "dur": 1.0,
+  "peak_db": -2.0,
+  "rms_db": -20.8,
+  "clip": 0,
+  "silent": 0.3,
+  "lead": 0.0,
+  "bad": []
+ },
+ "whoosh_heavy_a__1.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.0,
+  "rms_db": -16.7,
+  "clip": 0,
+  "silent": 0.08,
+  "lead": 0.045,
+  "bad": []
+ },
+ "whoosh_heavy_a__2.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.1,
+  "rms_db": -15.2,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.031,
+  "bad": []
+ },
+ "whoosh_heavy_a__3.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.5,
+  "rms_db": -19.0,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "whoosh_heavy_a__4.mp3": {
+  "dur": 0.6,
+  "peak_db": -1.5,
+  "rms_db": -14.9,
+  "clip": 0,
+  "silent": 0.08,
+  "lead": 0.045,
+  "bad": []
+ },
+ "whoosh_heavy_b__1.mp3": {
+  "dur": 0.68,
+  "peak_db": -3.0,
+  "rms_db": -21.6,
+  "clip": 0,
+  "silent": 0.08,
+  "lead": 0.0,
+  "bad": []
+ },
+ "whoosh_heavy_b__2.mp3": {
+  "dur": 0.68,
+  "peak_db": -1.8,
+  "rms_db": -21.4,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ },
+ "whoosh_light_a__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.4,
+  "rms_db": -17.4,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.002,
+  "bad": []
+ },
+ "whoosh_light_a__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -4.3,
+  "rms_db": -23.4,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.0,
+  "bad": []
+ },
+ "whoosh_light_a__3.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.5,
+  "rms_db": -20.9,
+  "clip": 0,
+  "silent": 0.11,
+  "lead": 0.004,
+  "bad": []
+ },
+ "whoosh_light_a__4.mp3": {
+  "dur": 0.48,
+  "peak_db": -22.4,
+  "rms_db": -35.7,
+  "clip": 0,
+  "silent": 0.22,
+  "lead": 0.0,
+  "bad": []
+ },
+ "whoosh_light_b__1.mp3": {
+  "dur": 0.48,
+  "peak_db": -0.5,
+  "rms_db": -16.4,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.033,
+  "bad": []
+ },
+ "whoosh_light_b__2.mp3": {
+  "dur": 0.48,
+  "peak_db": -1.7,
+  "rms_db": -18.3,
+  "clip": 0,
+  "silent": 0.0,
+  "lead": 0.0,
+  "bad": []
+ }
+}

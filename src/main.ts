@@ -2,6 +2,7 @@ import './style.css';
 import { Application, Container } from 'pixi.js';
 import { AudioEngine } from './audio/AudioEngine';
 import { VoiceDirector } from './audio/VoiceDirector';
+import { SfxDirector } from './audio/SfxDirector';
 import { getStageById, STAGES } from './data/stages';
 import { AIController } from './engine/AIController';
 import { CombatEngine } from './engine/CombatEngine';
@@ -27,6 +28,7 @@ class BobVsCoryApp {
   private save = loadSaveData();
   private audio = new AudioEngine(this.save.settings);
   private voiceDirector = new VoiceDirector(this.audio.voices);
+  private sfxDirector = new SfxDirector(this.audio);
   private ui!: UIManager;
 
   private engine: CombatEngine | null = null;
@@ -86,6 +88,7 @@ class BobVsCoryApp {
         onSettingsChanged: (s) => this.applySettings(s),
         onPauseToggle: (p) => { this.paused = p; },
         onClickSound: () => this.audio.playUIClick(),
+        onUISound: (kind) => this.audio.playUI(kind),
         onVoice: (clipId, delayMs) => {
           this.audio.unlock();
           this.audio.voices.play(clipId, { delayMs });
@@ -127,7 +130,9 @@ class BobVsCoryApp {
   private stopMatch(): void {
     this.engine = null;
     this.voiceDirector.detach();
+    this.sfxDirector.detach();
     this.audio.voices.stopAll();
+    this.audio.stopMatchAudio();
     this.paused = false;
     this.vfxRenderer.clear();
     this.camera.reset();
@@ -142,7 +147,11 @@ class BobVsCoryApp {
     this.camera.reset();
 
     const stageDef = getStageById(config.stage);
-    await this.stageRenderer.loadStage(stageDef);
+    this.audio.stopMatchAudio();
+    await Promise.all([
+      this.stageRenderer.loadStage(stageDef),
+      this.audio.preloadMatchAudio(config.stage, [config.p1Fighter, config.p2Fighter]),
+    ]);
 
     this.engine = new CombatEngine(config);
     this.aiP1.setDifficulty(config.aiDifficulty);
@@ -153,6 +162,7 @@ class BobVsCoryApp {
 
     this.ui.mountMatchHUD(this.engine);
     this.audio.setMusic(stageDef.musicStyle, false);
+    this.audio.setAmbience(config.stage);
   }
 
   private async startNextArcadeStage(): Promise<void> {
@@ -185,39 +195,10 @@ class BobVsCoryApp {
       this.audio.setMusic(stageDef.musicStyle, isFinalRound);
     }
 
+    // ElevenLabs SFX + stings (procedural sounds are the fallback inside SfxDirector/AudioEngine).
+    this.sfxDirector.update(engine, engine.events);
     for (const ev of engine.events) {
-      switch (ev.type) {
-        case 'hit':
-          this.audio.playHit(Boolean(ev.heavy));
-          break;
-        case 'block':
-          this.audio.playBlock(false);
-          break;
-        case 'flawless_block':
-        case 'up_block':
-          this.audio.playBlock(true);
-          break;
-        case 'teleport':
-          this.audio.playTeleport();
-          break;
-        case 'projectile_spawn':
-          if (ev.fighterId === 'cory') this.audio.playGlitterChime();
-          else this.audio.playTeleport();
-          break;
-        case 'parry':
-        case 'combo_breaker':
-          this.audio.playParry();
-          break;
-        case 'fatality_start':
-        case 'brutality_start':
-          this.audio.playEggplantSplat();
-          break;
-        case 'announcer':
-          if (ev.text) this.audio.speakAnnouncer(ev.text, isFinalRound);
-          break;
-        default:
-          break;
-      }
+      if (ev.type === 'announcer' && ev.text) this.audio.speakAnnouncer(ev.text, isFinalRound);
     }
 
     this.voiceDirector.update(engine, engine.events);
