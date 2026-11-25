@@ -4,6 +4,13 @@ import { STAGES } from '../data/stages';
 import { CombatEngine } from '../engine/CombatEngine';
 import { FIGHTER_DEFS } from '../engine/Fighter';
 import { InputRouter } from '../engine/InputBuffer';
+import {
+  applyDirectionsToInput,
+  axisToDirections,
+  bindTouchButtons,
+  bindVirtualStick,
+  NEUTRAL_AXIS,
+} from './TouchStick';
 import { TICK_RATE } from '../engine/constants';
 import {
   AIDifficulty,
@@ -74,6 +81,7 @@ export class UIManager {
 
   private movesTabFighter: FighterId = 'bob';
   private hudRefs: Record<string, HTMLElement | null> = {};
+  private touchCleanup: (() => void) | null = null;
   private lastAnnouncerId = -1;
   private victoryShown = false;
 
@@ -569,33 +577,52 @@ export class UIManager {
   private mountTouchControls(): void {
     const slot = this.hudRefs.touchSlot;
     if (!slot) return;
+    this.touchCleanup?.();
+    this.touchCleanup = null;
+
     slot.innerHTML = `
-      <div class="touch-controls">
-        <div class="touch-pad">
-          <div></div><button class="touch-btn" data-t="up">↑</button><div></div>
-          <button class="touch-btn" data-t="left">←</button>
-          <button class="touch-btn" data-t="down">↓</button>
-          <button class="touch-btn" data-t="right">→</button>
+      <div class="touch-controls" id="touch">
+        <div id="stick" aria-label="Movement stick">
+          <div id="knob"></div>
         </div>
-        <div class="touch-pad">
-          <button class="touch-btn" data-t="p1">1</button>
-          <button class="touch-btn" data-t="p2">2</button>
-          <button class="touch-btn" data-t="block" style="border-color:#38bdf8;">BLK</button>
-          <button class="touch-btn" data-t="k1">3</button>
-          <button class="touch-btn" data-t="k2">4</button>
-          <button class="touch-btn" data-t="fatalBlow" style="border-color:#ff2a55;">FB</button>
+        <div class="touch-buttons">
+          <button type="button" class="tb" id="tbP1" data-t="p1">1</button>
+          <button type="button" class="tb" id="tbP2" data-t="p2">2</button>
+          <button type="button" class="tb" id="tbBlk" data-t="block">BLK</button>
+          <button type="button" class="tb" id="tbK1" data-t="k1">3</button>
+          <button type="button" class="tb" id="tbK2" data-t="k2">4</button>
+          <button type="button" class="tb" id="tbFb" data-t="fatalBlow">FB</button>
+          <button type="button" class="tb" id="tbEx" data-t="ex">EX</button>
         </div>
       </div>
     `;
-    slot.querySelectorAll<HTMLElement>('[data-t]').forEach((btn) => {
-      const key = btn.dataset.t as keyof typeof this.inputRouter.touchState;
-      const down = (e: Event) => { e.preventDefault(); this.inputRouter.touchState[key] = true; };
-      const up = (e: Event) => { e.preventDefault(); this.inputRouter.touchState[key] = false; };
-      btn.addEventListener('pointerdown', down);
-      btn.addEventListener('pointerup', up);
-      btn.addEventListener('pointerleave', up);
-      btn.addEventListener('pointercancel', up);
-    });
+
+    const stick = slot.querySelector<HTMLElement>('#stick');
+    const knob = slot.querySelector<HTMLElement>('#knob');
+    const input = this.inputRouter.touchState;
+    applyDirectionsToInput(input, axisToDirections(NEUTRAL_AXIS));
+
+    const unbindStick = stick && knob
+      ? bindVirtualStick({
+          stick,
+          knob,
+          onAxis: (axis) => applyDirectionsToInput(input, axisToDirections(axis)),
+        })
+      : () => {};
+    const unbindButtons = bindTouchButtons(slot, input);
+    const blurStick = () => applyDirectionsToInput(input, axisToDirections(NEUTRAL_AXIS));
+    window.addEventListener('blur', blurStick);
+    const onVis = () => { if (document.hidden) blurStick(); };
+    document.addEventListener('visibilitychange', onVis);
+    document.body.classList.add('has-touch-controls');
+
+    this.touchCleanup = () => {
+      unbindStick();
+      unbindButtons();
+      window.removeEventListener('blur', blurStick);
+      document.removeEventListener('visibilitychange', onVis);
+      document.body.classList.remove('has-touch-controls');
+    };
   }
 
   public togglePause(engine: CombatEngine): void {
